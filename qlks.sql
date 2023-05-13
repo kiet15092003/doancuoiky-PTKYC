@@ -17,7 +17,7 @@ create table TaiKhoan
 create table NhanVien
 (
 	maNV varchar(10) not null,
-	hoTen varchar(30) not null,
+	hoTen nvarchar(30) not null,
 	ngaySinh date not null,
 	gioiTinh bit not null,
 	cccd varchar(20) not null,
@@ -28,10 +28,10 @@ create table NhanVien
 create table KhachHang
 (
 	maKH varchar(10) not null,
-	hoTen varchar(30) not null,
+	hoTen nvarchar(30) not null,
 	gioiTinh bit not null,
-	diaChi varchar(100) not null,
-	queQuan varchar(100) not null,
+	diaChi nvarchar(100) not null,
+	queQuan nvarchar(100) not null,
 	sdt varchar(11) not null,
 	cccd varchar(20) not null,
 	ngayDatPhong date not null,
@@ -55,7 +55,7 @@ create table Phong
 create table DichVu
 (
 	maDichVu int identity(1,1) not null,
-	tenDichVu varchar(30) not null,
+	tenDichVu nvarchar(30) not null,
 	giaDichVu int not null,
 
 	constraint pk_DichVU primary key(maDichVu),
