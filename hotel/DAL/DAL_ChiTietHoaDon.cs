@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DAL
+namespace DAL 
 {
-    public class DAL_ChiTietHoaDon
+    public class DAL_ChiTietHoaDon : DBConnect
     {
     }
 }
