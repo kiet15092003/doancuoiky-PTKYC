@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             panel4 = new Panel();
             textBox8 = new TextBox();
             textBox4 = new TextBox();
@@ -41,7 +41,7 @@
             textBox2 = new TextBox();
             panel1 = new Panel();
             textBox1 = new TextBox();
-            dataGridView1 = new DataGridView();
+            dgv_Phong = new DataGridView();
             textBox6 = new TextBox();
             button2 = new Button();
             textBox10 = new TextBox();
@@ -57,7 +57,7 @@
             comboBox3 = new ComboBox();
             textBox15 = new TextBox();
             button3 = new Button();
-            button4 = new Button();
+            btn_r1 = new Button();
             panel7 = new Panel();
             textBox16 = new TextBox();
             panel8 = new Panel();
@@ -87,7 +87,7 @@
             panel16 = new Panel();
             textBox25 = new TextBox();
             button13 = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgv_Phong).BeginInit();
             panel6.SuspendLayout();
             panel7.SuspendLayout();
             panel8.SuspendLayout();
@@ -104,9 +104,10 @@
             // panel4
             // 
             panel4.BackColor = Color.White;
-            panel4.Location = new Point(304, 62);
+            panel4.Location = new Point(266, 46);
+            panel4.Margin = new Padding(3, 2, 3, 2);
             panel4.Name = "panel4";
-            panel4.Size = new Size(250, 3);
+            panel4.Size = new Size(219, 2);
             panel4.TabIndex = 77;
             panel4.Paint += panel4_Paint;
             // 
@@ -118,10 +119,11 @@
             textBox8.Enabled = false;
             textBox8.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             textBox8.ForeColor = Color.White;
-            textBox8.Location = new Point(303, 30);
+            textBox8.Location = new Point(265, 22);
+            textBox8.Margin = new Padding(3, 2, 3, 2);
             textBox8.Name = "textBox8";
             textBox8.ReadOnly = true;
-            textBox8.Size = new Size(250, 27);
+            textBox8.Size = new Size(219, 22);
             textBox8.TabIndex = 76;
             textBox8.TextChanged += textBox8_TextChanged;
             // 
@@ -133,10 +135,11 @@
             textBox4.Enabled = false;
             textBox4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             textBox4.ForeColor = Color.White;
-            textBox4.Location = new Point(22, 189);
+            textBox4.Location = new Point(19, 142);
+            textBox4.Margin = new Padding(3, 2, 3, 2);
             textBox4.Name = "textBox4";
             textBox4.ReadOnly = true;
-            textBox4.Size = new Size(250, 27);
+            textBox4.Size = new Size(219, 22);
             textBox4.TabIndex = 75;
             textBox4.TextChanged += textBox4_TextChanged_1;
             // 
@@ -146,10 +149,11 @@
             textBox9.BorderStyle = BorderStyle.None;
             textBox9.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             textBox9.ForeColor = Color.White;
-            textBox9.Location = new Point(304, 71);
+            textBox9.Location = new Point(266, 53);
+            textBox9.Margin = new Padding(3, 2, 3, 2);
             textBox9.Name = "textBox9";
             textBox9.ReadOnly = true;
-            textBox9.Size = new Size(189, 27);
+            textBox9.Size = new Size(165, 22);
             textBox9.TabIndex = 73;
             textBox9.Text = "Status";
             textBox9.TextChanged += textBox9_TextChanged;
@@ -160,10 +164,11 @@
             textBox7.BorderStyle = BorderStyle.None;
             textBox7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             textBox7.ForeColor = Color.White;
-            textBox7.Location = new Point(303, -1);
+            textBox7.Location = new Point(265, -1);
+            textBox7.Margin = new Padding(3, 2, 3, 2);
             textBox7.Name = "textBox7";
             textBox7.ReadOnly = true;
-            textBox7.Size = new Size(125, 27);
+            textBox7.Size = new Size(109, 22);
             textBox7.TabIndex = 72;
             textBox7.Text = "Price";
             textBox7.TextChanged += textBox7_TextChanged;
@@ -174,10 +179,11 @@
             textBox5.BorderStyle = BorderStyle.None;
             textBox5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             textBox5.ForeColor = Color.White;
-            textBox5.Location = new Point(21, 157);
+            textBox5.Location = new Point(18, 118);
+            textBox5.Margin = new Padding(3, 2, 3, 2);
             textBox5.Name = "textBox5";
             textBox5.ReadOnly = true;
-            textBox5.Size = new Size(125, 27);
+            textBox5.Size = new Size(109, 22);
             textBox5.TabIndex = 71;
             textBox5.Text = "Max";
             textBox5.TextChanged += textBox5_TextChanged_1;
@@ -185,9 +191,10 @@
             // panel3
             // 
             panel3.BackColor = Color.White;
-            panel3.Location = new Point(22, 222);
+            panel3.Location = new Point(19, 166);
+            panel3.Margin = new Padding(3, 2, 3, 2);
             panel3.Name = "panel3";
-            panel3.Size = new Size(250, 3);
+            panel3.Size = new Size(219, 2);
             panel3.TabIndex = 70;
             panel3.Paint += panel3_Paint_1;
             // 
@@ -197,10 +204,11 @@
             textBox3.BorderStyle = BorderStyle.None;
             textBox3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             textBox3.ForeColor = Color.White;
-            textBox3.Location = new Point(22, 71);
+            textBox3.Location = new Point(19, 53);
+            textBox3.Margin = new Padding(3, 2, 3, 2);
             textBox3.Name = "textBox3";
             textBox3.ReadOnly = true;
-            textBox3.Size = new Size(125, 27);
+            textBox3.Size = new Size(109, 22);
             textBox3.TabIndex = 69;
             textBox3.Text = "Type";
             textBox3.TextChanged += textBox3_TextChanged_1;
@@ -208,9 +216,10 @@
             // panel2
             // 
             panel2.BackColor = Color.White;
-            panel2.Location = new Point(23, 136);
+            panel2.Location = new Point(20, 102);
+            panel2.Margin = new Padding(3, 2, 3, 2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(250, 3);
+            panel2.Size = new Size(219, 2);
             panel2.TabIndex = 68;
             panel2.Paint += panel2_Paint_1;
             // 
@@ -220,10 +229,11 @@
             textBox2.BorderStyle = BorderStyle.None;
             textBox2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             textBox2.ForeColor = Color.White;
-            textBox2.Location = new Point(21, -1);
+            textBox2.Location = new Point(18, -1);
+            textBox2.Margin = new Padding(3, 2, 3, 2);
             textBox2.Name = "textBox2";
             textBox2.ReadOnly = true;
-            textBox2.Size = new Size(125, 27);
+            textBox2.Size = new Size(109, 22);
             textBox2.TabIndex = 67;
             textBox2.Text = "ID ";
             textBox2.TextChanged += textBox2_TextChanged_1;
@@ -231,9 +241,10 @@
             // panel1
             // 
             panel1.BackColor = Color.White;
-            panel1.Location = new Point(23, 62);
+            panel1.Location = new Point(20, 46);
+            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(250, 3);
+            panel1.Size = new Size(219, 2);
             panel1.TabIndex = 66;
             panel1.Paint += panel1_Paint_1;
             // 
@@ -245,31 +256,33 @@
             textBox1.Enabled = false;
             textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             textBox1.ForeColor = Color.White;
-            textBox1.Location = new Point(22, 30);
+            textBox1.Location = new Point(19, 22);
+            textBox1.Margin = new Padding(3, 2, 3, 2);
             textBox1.Name = "textBox1";
             textBox1.ReadOnly = true;
-            textBox1.Size = new Size(250, 27);
+            textBox1.Size = new Size(219, 22);
             textBox1.TabIndex = 65;
             textBox1.TextChanged += textBox1_TextChanged_1;
             // 
-            // dataGridView1
+            // dgv_Phong
             // 
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridView1.BackgroundColor = Color.Black;
-            dataGridView1.BorderStyle = BorderStyle.Fixed3D;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.GridColor = Color.White;
-            dataGridView1.Location = new Point(1091, 384);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(0, 1, 0);
-            dataGridViewCellStyle1.Font = new Font("Dubai", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle1.SelectionBackColor = Color.DarkGray;
-            dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(279, 339);
-            dataGridView1.TabIndex = 64;
+            dgv_Phong.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgv_Phong.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgv_Phong.BackgroundColor = Color.Black;
+            dgv_Phong.BorderStyle = BorderStyle.Fixed3D;
+            dgv_Phong.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgv_Phong.GridColor = Color.White;
+            dgv_Phong.Location = new Point(895, 288);
+            dgv_Phong.Margin = new Padding(3, 2, 3, 2);
+            dgv_Phong.Name = "dgv_Phong";
+            dgv_Phong.RowHeadersWidth = 51;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(0, 1, 0);
+            dataGridViewCellStyle2.Font = new Font("Dubai", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.SelectionBackColor = Color.DarkGray;
+            dgv_Phong.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dgv_Phong.RowTemplate.Height = 29;
+            dgv_Phong.Size = new Size(473, 254);
+            dgv_Phong.TabIndex = 64;
             // 
             // textBox6
             // 
@@ -277,10 +290,11 @@
             textBox6.BorderStyle = BorderStyle.None;
             textBox6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             textBox6.ForeColor = Color.White;
-            textBox6.Location = new Point(1141, 331);
+            textBox6.Location = new Point(1061, 262);
+            textBox6.Margin = new Padding(3, 2, 3, 2);
             textBox6.Name = "textBox6";
             textBox6.ReadOnly = true;
-            textBox6.Size = new Size(189, 27);
+            textBox6.Size = new Size(165, 22);
             textBox6.TabIndex = 80;
             textBox6.Text = "CHOOSE AND BOOK";
             // 
@@ -294,9 +308,10 @@
             button2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             button2.ForeColor = Color.White;
             button2.Image = Properties.Resources.booking_10;
-            button2.Location = new Point(1171, 729);
+            button2.Location = new Point(1087, 556);
+            button2.Margin = new Padding(3, 2, 3, 2);
             button2.Name = "button2";
-            button2.Size = new Size(138, 67);
+            button2.Size = new Size(121, 50);
             button2.TabIndex = 81;
             button2.TextAlign = ContentAlignment.MiddleLeft;
             button2.UseVisualStyleBackColor = false;
@@ -310,19 +325,21 @@
             textBox10.Enabled = false;
             textBox10.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             textBox10.ForeColor = Color.White;
-            textBox10.Location = new Point(22, 103);
+            textBox10.Location = new Point(19, 77);
+            textBox10.Margin = new Padding(3, 2, 3, 2);
             textBox10.Name = "textBox10";
             textBox10.ReadOnly = true;
-            textBox10.Size = new Size(250, 27);
+            textBox10.Size = new Size(219, 22);
             textBox10.TabIndex = 82;
             textBox10.TextChanged += textBox10_TextChanged_1;
             // 
             // panel5
             // 
             panel5.BackColor = Color.White;
-            panel5.Location = new Point(305, 144);
+            panel5.Location = new Point(267, 108);
+            panel5.Margin = new Padding(3, 2, 3, 2);
             panel5.Name = "panel5";
-            panel5.Size = new Size(250, 3);
+            panel5.Size = new Size(219, 2);
             panel5.TabIndex = 84;
             panel5.Paint += panel5_Paint;
             // 
@@ -334,10 +351,11 @@
             textBox11.Enabled = false;
             textBox11.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             textBox11.ForeColor = Color.White;
-            textBox11.Location = new Point(304, 112);
+            textBox11.Location = new Point(266, 84);
+            textBox11.Margin = new Padding(3, 2, 3, 2);
             textBox11.Name = "textBox11";
             textBox11.ReadOnly = true;
-            textBox11.Size = new Size(250, 27);
+            textBox11.Size = new Size(219, 22);
             textBox11.TabIndex = 83;
             textBox11.TextChanged += textBox11_TextChanged;
             // 
@@ -361,9 +379,10 @@
             panel6.Controls.Add(panel1);
             panel6.Controls.Add(textBox1);
             panel6.ForeColor = SystemColors.ButtonHighlight;
-            panel6.Location = new Point(826, 16);
+            panel6.Location = new Point(723, 12);
+            panel6.Margin = new Padding(3, 2, 3, 2);
             panel6.Name = "panel6";
-            panel6.Size = new Size(607, 257);
+            panel6.Size = new Size(531, 193);
             panel6.TabIndex = 85;
             // 
             // button1
@@ -372,9 +391,10 @@
             button1.BackgroundImage = Properties.Resources.search_1_5;
             button1.Cursor = Cursors.Hand;
             button1.FlatStyle = FlatStyle.Flat;
-            button1.Location = new Point(494, 21);
+            button1.Location = new Point(432, 16);
+            button1.Margin = new Padding(3, 2, 3, 2);
             button1.Name = "button1";
-            button1.Size = new Size(28, 27);
+            button1.Size = new Size(24, 20);
             button1.TabIndex = 87;
             button1.UseVisualStyleBackColor = false;
             // 
@@ -384,10 +404,11 @@
             textBox12.Cursor = Cursors.IBeam;
             textBox12.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             textBox12.ForeColor = Color.White;
-            textBox12.Location = new Point(217, 16);
+            textBox12.Location = new Point(190, 12);
+            textBox12.Margin = new Padding(3, 2, 3, 2);
             textBox12.Name = "textBox12";
             textBox12.PlaceholderText = "Search ID or Name";
-            textBox12.Size = new Size(313, 38);
+            textBox12.Size = new Size(274, 32);
             textBox12.TabIndex = 86;
             // 
             // comboBox1
@@ -395,9 +416,10 @@
             comboBox1.Cursor = Cursors.Hand;
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "Single", "Double", "Triple" });
-            comboBox1.Location = new Point(283, 132);
+            comboBox1.Location = new Point(248, 99);
+            comboBox1.Margin = new Padding(3, 2, 3, 2);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(247, 28);
+            comboBox1.Size = new Size(217, 23);
             comboBox1.TabIndex = 89;
             comboBox1.Text = "--All--";
             // 
@@ -407,10 +429,11 @@
             textBox13.BorderStyle = BorderStyle.None;
             textBox13.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             textBox13.ForeColor = Color.White;
-            textBox13.Location = new Point(217, 132);
+            textBox13.Location = new Point(190, 99);
+            textBox13.Margin = new Padding(3, 2, 3, 2);
             textBox13.Name = "textBox13";
             textBox13.ReadOnly = true;
-            textBox13.Size = new Size(125, 27);
+            textBox13.Size = new Size(109, 22);
             textBox13.TabIndex = 88;
             textBox13.Text = "Type";
             // 
@@ -419,9 +442,10 @@
             comboBox2.Cursor = Cursors.Hand;
             comboBox2.FormattingEnabled = true;
             comboBox2.Items.AddRange(new object[] { "Single", "Double", "Triple" });
-            comboBox2.Location = new Point(283, 193);
+            comboBox2.Location = new Point(248, 145);
+            comboBox2.Margin = new Padding(3, 2, 3, 2);
             comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(247, 28);
+            comboBox2.Size = new Size(217, 23);
             comboBox2.TabIndex = 91;
             comboBox2.Text = "--All--";
             // 
@@ -431,10 +455,11 @@
             textBox14.BorderStyle = BorderStyle.None;
             textBox14.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             textBox14.ForeColor = Color.White;
-            textBox14.Location = new Point(217, 193);
+            textBox14.Location = new Point(190, 145);
+            textBox14.Margin = new Padding(3, 2, 3, 2);
             textBox14.Name = "textBox14";
             textBox14.ReadOnly = true;
-            textBox14.Size = new Size(125, 27);
+            textBox14.Size = new Size(109, 22);
             textBox14.TabIndex = 90;
             textBox14.Text = "Max";
             // 
@@ -443,9 +468,10 @@
             comboBox3.Cursor = Cursors.Hand;
             comboBox3.FormattingEnabled = true;
             comboBox3.Items.AddRange(new object[] { "Single", "Double", "Triple" });
-            comboBox3.Location = new Point(283, 246);
+            comboBox3.Location = new Point(248, 184);
+            comboBox3.Margin = new Padding(3, 2, 3, 2);
             comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(247, 28);
+            comboBox3.Size = new Size(217, 23);
             comboBox3.TabIndex = 93;
             comboBox3.Text = "--All--";
             // 
@@ -455,10 +481,11 @@
             textBox15.BorderStyle = BorderStyle.None;
             textBox15.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             textBox15.ForeColor = Color.White;
-            textBox15.Location = new Point(217, 246);
+            textBox15.Location = new Point(190, 184);
+            textBox15.Margin = new Padding(3, 2, 3, 2);
             textBox15.Name = "textBox15";
             textBox15.ReadOnly = true;
-            textBox15.Size = new Size(125, 27);
+            textBox15.Size = new Size(109, 22);
             textBox15.TabIndex = 92;
             textBox15.Text = "Price";
             // 
@@ -469,39 +496,42 @@
             button3.ForeColor = Color.White;
             button3.Image = Properties.Resources.search_1_5;
             button3.ImageAlign = ContentAlignment.MiddleRight;
-            button3.Location = new Point(320, 298);
+            button3.Location = new Point(280, 224);
+            button3.Margin = new Padding(3, 2, 3, 2);
             button3.Name = "button3";
-            button3.Size = new Size(94, 45);
+            button3.Size = new Size(82, 34);
             button3.TabIndex = 94;
             button3.Text = "Find";
             button3.TextAlign = ContentAlignment.MiddleLeft;
             button3.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // btn_r1
             // 
-            button4.BackgroundImage = Properties.Resources._17e883b3_ea30_4603_b452_4a27d9d033c4_2_20;
-            button4.Cursor = Cursors.Hand;
-            button4.FlatStyle = FlatStyle.Flat;
-            button4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button4.ForeColor = Color.White;
-            button4.Location = new Point(-10, -73);
-            button4.Name = "button4";
-            button4.Size = new Size(184, 184);
-            button4.TabIndex = 95;
-            button4.Text = "Room 1";
-            button4.TextAlign = ContentAlignment.BottomCenter;
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
+            btn_r1.BackgroundImage = Properties.Resources._17e883b3_ea30_4603_b452_4a27d9d033c4_2_20;
+            btn_r1.Cursor = Cursors.Hand;
+            btn_r1.FlatStyle = FlatStyle.Flat;
+            btn_r1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_r1.ForeColor = Color.White;
+            btn_r1.Location = new Point(-9, -55);
+            btn_r1.Margin = new Padding(3, 2, 3, 2);
+            btn_r1.Name = "btn_r1";
+            btn_r1.Size = new Size(161, 138);
+            btn_r1.TabIndex = 95;
+            btn_r1.Text = "Room 1";
+            btn_r1.TextAlign = ContentAlignment.BottomCenter;
+            btn_r1.UseVisualStyleBackColor = true;
+            btn_r1.Click += btn_r1_Click;
             // 
             // panel7
             // 
             panel7.BackColor = Color.Black;
             panel7.Controls.Add(textBox16);
-            panel7.Controls.Add(button4);
+            panel7.Controls.Add(btn_r1);
             panel7.Cursor = Cursors.Hand;
-            panel7.Location = new Point(29, 384);
+            panel7.Location = new Point(25, 288);
+            panel7.Margin = new Padding(3, 2, 3, 2);
             panel7.Name = "panel7";
-            panel7.Size = new Size(155, 197);
+            panel7.Size = new Size(136, 148);
             panel7.TabIndex = 96;
             // 
             // textBox16
@@ -509,10 +539,11 @@
             textBox16.BackColor = SystemColors.InactiveCaptionText;
             textBox16.BorderStyle = BorderStyle.None;
             textBox16.ForeColor = Color.White;
-            textBox16.Location = new Point(46, 117);
+            textBox16.Location = new Point(40, 88);
+            textBox16.Margin = new Padding(3, 2, 3, 2);
             textBox16.Name = "textBox16";
             textBox16.PlaceholderText = "Trạng thái";
-            textBox16.Size = new Size(83, 20);
+            textBox16.Size = new Size(73, 16);
             textBox16.TabIndex = 97;
             // 
             // panel8
@@ -520,9 +551,10 @@
             panel8.BackColor = Color.Black;
             panel8.Controls.Add(textBox17);
             panel8.Controls.Add(button5);
-            panel8.Location = new Point(219, 384);
+            panel8.Location = new Point(192, 288);
+            panel8.Margin = new Padding(3, 2, 3, 2);
             panel8.Name = "panel8";
-            panel8.Size = new Size(155, 197);
+            panel8.Size = new Size(136, 148);
             panel8.TabIndex = 97;
             // 
             // textBox17
@@ -530,10 +562,11 @@
             textBox17.BackColor = SystemColors.InactiveCaptionText;
             textBox17.BorderStyle = BorderStyle.None;
             textBox17.ForeColor = Color.White;
-            textBox17.Location = new Point(46, 117);
+            textBox17.Location = new Point(40, 88);
+            textBox17.Margin = new Padding(3, 2, 3, 2);
             textBox17.Name = "textBox17";
             textBox17.PlaceholderText = "Trạng thái";
-            textBox17.Size = new Size(83, 20);
+            textBox17.Size = new Size(73, 16);
             textBox17.TabIndex = 97;
             // 
             // button5
@@ -543,9 +576,10 @@
             button5.FlatStyle = FlatStyle.Flat;
             button5.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             button5.ForeColor = Color.White;
-            button5.Location = new Point(-10, -35);
+            button5.Location = new Point(-9, -26);
+            button5.Margin = new Padding(3, 2, 3, 2);
             button5.Name = "button5";
-            button5.Size = new Size(175, 146);
+            button5.Size = new Size(153, 110);
             button5.TabIndex = 95;
             button5.Text = "Room 2";
             button5.TextAlign = ContentAlignment.BottomCenter;
@@ -557,9 +591,10 @@
             panel9.BackColor = Color.Black;
             panel9.Controls.Add(textBox18);
             panel9.Controls.Add(button6);
-            panel9.Location = new Point(421, 384);
+            panel9.Location = new Point(368, 288);
+            panel9.Margin = new Padding(3, 2, 3, 2);
             panel9.Name = "panel9";
-            panel9.Size = new Size(155, 197);
+            panel9.Size = new Size(136, 148);
             panel9.TabIndex = 98;
             // 
             // textBox18
@@ -567,10 +602,11 @@
             textBox18.BackColor = SystemColors.InactiveCaptionText;
             textBox18.BorderStyle = BorderStyle.None;
             textBox18.ForeColor = Color.White;
-            textBox18.Location = new Point(46, 117);
+            textBox18.Location = new Point(40, 88);
+            textBox18.Margin = new Padding(3, 2, 3, 2);
             textBox18.Name = "textBox18";
             textBox18.PlaceholderText = "Trạng thái";
-            textBox18.Size = new Size(83, 20);
+            textBox18.Size = new Size(73, 16);
             textBox18.TabIndex = 97;
             // 
             // button6
@@ -580,9 +616,10 @@
             button6.FlatStyle = FlatStyle.Flat;
             button6.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             button6.ForeColor = Color.White;
-            button6.Location = new Point(-22, -102);
+            button6.Location = new Point(-19, -76);
+            button6.Margin = new Padding(3, 2, 3, 2);
             button6.Name = "button6";
-            button6.Size = new Size(186, 213);
+            button6.Size = new Size(163, 160);
             button6.TabIndex = 95;
             button6.Text = "Room 3";
             button6.TextAlign = ContentAlignment.BottomCenter;
@@ -594,9 +631,10 @@
             panel10.BackColor = Color.Black;
             panel10.Controls.Add(textBox19);
             panel10.Controls.Add(button7);
-            panel10.Location = new Point(623, 384);
+            panel10.Location = new Point(545, 288);
+            panel10.Margin = new Padding(3, 2, 3, 2);
             panel10.Name = "panel10";
-            panel10.Size = new Size(155, 197);
+            panel10.Size = new Size(136, 148);
             panel10.TabIndex = 98;
             // 
             // textBox19
@@ -604,10 +642,11 @@
             textBox19.BackColor = SystemColors.InactiveCaptionText;
             textBox19.BorderStyle = BorderStyle.None;
             textBox19.ForeColor = Color.White;
-            textBox19.Location = new Point(46, 117);
+            textBox19.Location = new Point(40, 88);
+            textBox19.Margin = new Padding(3, 2, 3, 2);
             textBox19.Name = "textBox19";
             textBox19.PlaceholderText = "Trạng thái";
-            textBox19.Size = new Size(83, 20);
+            textBox19.Size = new Size(73, 16);
             textBox19.TabIndex = 97;
             // 
             // button7
@@ -617,9 +656,10 @@
             button7.FlatStyle = FlatStyle.Flat;
             button7.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             button7.ForeColor = Color.White;
-            button7.Location = new Point(-4, -86);
+            button7.Location = new Point(-4, -64);
+            button7.Margin = new Padding(3, 2, 3, 2);
             button7.Name = "button7";
-            button7.Size = new Size(167, 197);
+            button7.Size = new Size(146, 148);
             button7.TabIndex = 95;
             button7.Text = "Room 4";
             button7.TextAlign = ContentAlignment.BottomCenter;
@@ -631,9 +671,10 @@
             panel11.BackColor = Color.Black;
             panel11.Controls.Add(textBox20);
             panel11.Controls.Add(button8);
-            panel11.Location = new Point(826, 384);
+            panel11.Location = new Point(723, 288);
+            panel11.Margin = new Padding(3, 2, 3, 2);
             panel11.Name = "panel11";
-            panel11.Size = new Size(155, 197);
+            panel11.Size = new Size(136, 148);
             panel11.TabIndex = 99;
             // 
             // textBox20
@@ -641,10 +682,11 @@
             textBox20.BackColor = SystemColors.InactiveCaptionText;
             textBox20.BorderStyle = BorderStyle.None;
             textBox20.ForeColor = Color.White;
-            textBox20.Location = new Point(46, 117);
+            textBox20.Location = new Point(40, 88);
+            textBox20.Margin = new Padding(3, 2, 3, 2);
             textBox20.Name = "textBox20";
             textBox20.PlaceholderText = "Trạng thái";
-            textBox20.Size = new Size(83, 20);
+            textBox20.Size = new Size(73, 16);
             textBox20.TabIndex = 97;
             // 
             // button8
@@ -654,9 +696,10 @@
             button8.FlatStyle = FlatStyle.Flat;
             button8.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             button8.ForeColor = Color.White;
-            button8.Location = new Point(-12, -86);
+            button8.Location = new Point(-10, -64);
+            button8.Margin = new Padding(3, 2, 3, 2);
             button8.Name = "button8";
-            button8.Size = new Size(184, 197);
+            button8.Size = new Size(161, 148);
             button8.TabIndex = 95;
             button8.Text = "Room 5";
             button8.TextAlign = ContentAlignment.BottomCenter;
@@ -668,9 +711,10 @@
             panel12.BackColor = Color.Black;
             panel12.Controls.Add(textBox21);
             panel12.Controls.Add(button9);
-            panel12.Location = new Point(826, 610);
+            panel12.Location = new Point(723, 458);
+            panel12.Margin = new Padding(3, 2, 3, 2);
             panel12.Name = "panel12";
-            panel12.Size = new Size(155, 197);
+            panel12.Size = new Size(136, 148);
             panel12.TabIndex = 104;
             // 
             // textBox21
@@ -678,10 +722,11 @@
             textBox21.BackColor = SystemColors.InactiveCaptionText;
             textBox21.BorderStyle = BorderStyle.None;
             textBox21.ForeColor = Color.White;
-            textBox21.Location = new Point(46, 117);
+            textBox21.Location = new Point(40, 88);
+            textBox21.Margin = new Padding(3, 2, 3, 2);
             textBox21.Name = "textBox21";
             textBox21.PlaceholderText = "Trạng thái";
-            textBox21.Size = new Size(83, 20);
+            textBox21.Size = new Size(73, 16);
             textBox21.TabIndex = 97;
             // 
             // button9
@@ -691,9 +736,10 @@
             button9.FlatStyle = FlatStyle.Flat;
             button9.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             button9.ForeColor = Color.White;
-            button9.Location = new Point(-12, -61);
+            button9.Location = new Point(-10, -46);
+            button9.Margin = new Padding(3, 2, 3, 2);
             button9.Name = "button9";
-            button9.Size = new Size(184, 172);
+            button9.Size = new Size(161, 129);
             button9.TabIndex = 95;
             button9.Text = "Room 10";
             button9.TextAlign = ContentAlignment.BottomCenter;
@@ -705,9 +751,10 @@
             panel13.BackColor = Color.Black;
             panel13.Controls.Add(textBox22);
             panel13.Controls.Add(button10);
-            panel13.Location = new Point(623, 610);
+            panel13.Location = new Point(545, 458);
+            panel13.Margin = new Padding(3, 2, 3, 2);
             panel13.Name = "panel13";
-            panel13.Size = new Size(155, 197);
+            panel13.Size = new Size(136, 148);
             panel13.TabIndex = 102;
             // 
             // textBox22
@@ -715,10 +762,11 @@
             textBox22.BackColor = SystemColors.InactiveCaptionText;
             textBox22.BorderStyle = BorderStyle.None;
             textBox22.ForeColor = Color.White;
-            textBox22.Location = new Point(46, 117);
+            textBox22.Location = new Point(40, 88);
+            textBox22.Margin = new Padding(3, 2, 3, 2);
             textBox22.Name = "textBox22";
             textBox22.PlaceholderText = "Trạng thái";
-            textBox22.Size = new Size(83, 20);
+            textBox22.Size = new Size(73, 16);
             textBox22.TabIndex = 97;
             // 
             // button10
@@ -728,9 +776,10 @@
             button10.FlatStyle = FlatStyle.Flat;
             button10.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             button10.ForeColor = Color.White;
-            button10.Location = new Point(-4, -92);
+            button10.Location = new Point(-4, -69);
+            button10.Margin = new Padding(3, 2, 3, 2);
             button10.Name = "button10";
-            button10.Size = new Size(167, 203);
+            button10.Size = new Size(146, 152);
             button10.TabIndex = 95;
             button10.Text = "Room 9";
             button10.TextAlign = ContentAlignment.BottomCenter;
@@ -742,9 +791,10 @@
             panel14.BackColor = Color.Black;
             panel14.Controls.Add(textBox23);
             panel14.Controls.Add(button11);
-            panel14.Location = new Point(421, 610);
+            panel14.Location = new Point(368, 458);
+            panel14.Margin = new Padding(3, 2, 3, 2);
             panel14.Name = "panel14";
-            panel14.Size = new Size(155, 197);
+            panel14.Size = new Size(136, 148);
             panel14.TabIndex = 103;
             // 
             // textBox23
@@ -752,10 +802,11 @@
             textBox23.BackColor = SystemColors.InactiveCaptionText;
             textBox23.BorderStyle = BorderStyle.None;
             textBox23.ForeColor = Color.White;
-            textBox23.Location = new Point(46, 117);
+            textBox23.Location = new Point(40, 88);
+            textBox23.Margin = new Padding(3, 2, 3, 2);
             textBox23.Name = "textBox23";
             textBox23.PlaceholderText = "Trạng thái";
-            textBox23.Size = new Size(83, 20);
+            textBox23.Size = new Size(73, 16);
             textBox23.TabIndex = 97;
             // 
             // button11
@@ -765,9 +816,10 @@
             button11.FlatStyle = FlatStyle.Flat;
             button11.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             button11.ForeColor = Color.White;
-            button11.Location = new Point(-22, -83);
+            button11.Location = new Point(-19, -62);
+            button11.Margin = new Padding(3, 2, 3, 2);
             button11.Name = "button11";
-            button11.Size = new Size(186, 194);
+            button11.Size = new Size(163, 146);
             button11.TabIndex = 95;
             button11.Text = "Room 8";
             button11.TextAlign = ContentAlignment.BottomCenter;
@@ -779,9 +831,10 @@
             panel15.BackColor = Color.Black;
             panel15.Controls.Add(textBox24);
             panel15.Controls.Add(button12);
-            panel15.Location = new Point(229, 610);
+            panel15.Location = new Point(200, 458);
+            panel15.Margin = new Padding(3, 2, 3, 2);
             panel15.Name = "panel15";
-            panel15.Size = new Size(155, 197);
+            panel15.Size = new Size(136, 148);
             panel15.TabIndex = 101;
             // 
             // textBox24
@@ -789,10 +842,11 @@
             textBox24.BackColor = SystemColors.InactiveCaptionText;
             textBox24.BorderStyle = BorderStyle.None;
             textBox24.ForeColor = Color.White;
-            textBox24.Location = new Point(46, 117);
+            textBox24.Location = new Point(40, 88);
+            textBox24.Margin = new Padding(3, 2, 3, 2);
             textBox24.Name = "textBox24";
             textBox24.PlaceholderText = "Trạng thái";
-            textBox24.Size = new Size(83, 20);
+            textBox24.Size = new Size(73, 16);
             textBox24.TabIndex = 97;
             // 
             // button12
@@ -802,9 +856,10 @@
             button12.FlatStyle = FlatStyle.Flat;
             button12.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             button12.ForeColor = Color.White;
-            button12.Location = new Point(-20, -72);
+            button12.Location = new Point(-18, -54);
+            button12.Margin = new Padding(3, 2, 3, 2);
             button12.Name = "button12";
-            button12.Size = new Size(184, 183);
+            button12.Size = new Size(161, 137);
             button12.TabIndex = 95;
             button12.Text = "Room 7";
             button12.TextAlign = ContentAlignment.BottomCenter;
@@ -816,9 +871,10 @@
             panel16.BackColor = Color.Black;
             panel16.Controls.Add(textBox25);
             panel16.Controls.Add(button13);
-            panel16.Location = new Point(29, 610);
+            panel16.Location = new Point(25, 458);
+            panel16.Margin = new Padding(3, 2, 3, 2);
             panel16.Name = "panel16";
-            panel16.Size = new Size(155, 197);
+            panel16.Size = new Size(136, 148);
             panel16.TabIndex = 100;
             // 
             // textBox25
@@ -826,10 +882,11 @@
             textBox25.BackColor = SystemColors.InactiveCaptionText;
             textBox25.BorderStyle = BorderStyle.None;
             textBox25.ForeColor = Color.White;
-            textBox25.Location = new Point(46, 117);
+            textBox25.Location = new Point(40, 88);
+            textBox25.Margin = new Padding(3, 2, 3, 2);
             textBox25.Name = "textBox25";
             textBox25.PlaceholderText = "Trạng thái";
-            textBox25.Size = new Size(83, 20);
+            textBox25.Size = new Size(73, 16);
             textBox25.TabIndex = 97;
             // 
             // button13
@@ -839,9 +896,10 @@
             button13.FlatStyle = FlatStyle.Flat;
             button13.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             button13.ForeColor = Color.White;
-            button13.Location = new Point(-10, -72);
+            button13.Location = new Point(-9, -54);
+            button13.Margin = new Padding(3, 2, 3, 2);
             button13.Name = "button13";
-            button13.Size = new Size(177, 183);
+            button13.Size = new Size(155, 137);
             button13.TabIndex = 95;
             button13.Text = "Room 6";
             button13.TextAlign = ContentAlignment.BottomCenter;
@@ -850,7 +908,7 @@
             // 
             // checkin
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Midnight_Inn__6_;
             Controls.Add(panel12);
@@ -875,11 +933,12 @@
             Controls.Add(panel6);
             Controls.Add(button2);
             Controls.Add(textBox6);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgv_Phong);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "checkin";
-            Size = new Size(1643, 905);
+            Size = new Size(1438, 679);
             Load += checkin_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgv_Phong).EndInit();
             panel6.ResumeLayout(false);
             panel6.PerformLayout();
             panel7.ResumeLayout(false);
@@ -919,7 +978,7 @@
         private TextBox textBox2;
         private Panel panel1;
         private TextBox textBox1;
-        private DataGridView dataGridView1;
+        private DataGridView dgv_Phong;
         private TextBox textBox6;
         private Button button2;
         private TextBox textBox10;
@@ -935,7 +994,7 @@
         private ComboBox comboBox3;
         private TextBox textBox15;
         private Button button3;
-        private Button button4;
+        private Button btn_r1;
         private Panel panel7;
         private TextBox textBox16;
         private Panel panel8;

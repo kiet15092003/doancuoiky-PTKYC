@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    public class DAL_HoaDon
+    public class DAL_HoaDon : DBConnect
     {
     }
 }

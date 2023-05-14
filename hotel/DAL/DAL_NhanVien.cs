@@ -94,5 +94,18 @@ namespace DAL
             conn.Close();
         }
 
+        public void bindGridViewbySearch(DataGridView dataGridView, string name)
+        {
+            conn.Open();
+            string query = "SELECT * from NhanVien where maNV LIKE '%' + @name + '%' or hoTen LIKE '%' + @name + '%'";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@name", name);
+            SqlDataAdapter dv = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            dv.Fill(dt);
+            dataGridView.DataSource = dt;
+            conn.Close();
+        }
+
     }
 }

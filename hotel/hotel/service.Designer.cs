@@ -28,69 +28,73 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             panel4 = new Panel();
-            textBox8 = new TextBox();
-            textBox4 = new TextBox();
-            button1 = new Button();
+            txt_price = new TextBox();
+            txt_name = new TextBox();
+            btn_search = new Button();
             textBox6 = new TextBox();
-            button4 = new Button();
-            button2 = new Button();
+            btn_delete = new Button();
+            btn_add = new Button();
             textBox7 = new TextBox();
             textBox5 = new TextBox();
             panel3 = new Panel();
             textBox2 = new TextBox();
             panel1 = new Panel();
-            textBox1 = new TextBox();
-            dataGridView1 = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            txt_id = new TextBox();
+            dgv_service = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dgv_service).BeginInit();
             SuspendLayout();
             // 
             // panel4
             // 
             panel4.BackColor = Color.White;
-            panel4.Location = new Point(24, 424);
+            panel4.Location = new Point(21, 318);
+            panel4.Margin = new Padding(3, 2, 3, 2);
             panel4.Name = "panel4";
-            panel4.Size = new Size(250, 3);
+            panel4.Size = new Size(219, 2);
             panel4.TabIndex = 82;
             panel4.Paint += panel4_Paint;
             // 
-            // textBox8
+            // txt_price
             // 
-            textBox8.BackColor = Color.FromArgb(0, 1, 0);
-            textBox8.BorderStyle = BorderStyle.None;
-            textBox8.Cursor = Cursors.IBeam;
-            textBox8.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox8.ForeColor = Color.White;
-            textBox8.Location = new Point(23, 392);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(250, 27);
-            textBox8.TabIndex = 81;
-            textBox8.TextChanged += textBox8_TextChanged;
+            txt_price.BackColor = Color.FromArgb(0, 1, 0);
+            txt_price.BorderStyle = BorderStyle.None;
+            txt_price.Cursor = Cursors.IBeam;
+            txt_price.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_price.ForeColor = Color.White;
+            txt_price.Location = new Point(20, 294);
+            txt_price.Margin = new Padding(3, 2, 3, 2);
+            txt_price.Name = "txt_price";
+            txt_price.Size = new Size(219, 22);
+            txt_price.TabIndex = 81;
+            txt_price.TextChanged += textBox8_TextChanged;
             // 
-            // textBox4
+            // txt_name
             // 
-            textBox4.BackColor = Color.FromArgb(0, 1, 0);
-            textBox4.BorderStyle = BorderStyle.None;
-            textBox4.Cursor = Cursors.IBeam;
-            textBox4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox4.ForeColor = Color.White;
-            textBox4.Location = new Point(23, 301);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(250, 27);
-            textBox4.TabIndex = 80;
+            txt_name.BackColor = Color.FromArgb(0, 1, 0);
+            txt_name.BorderStyle = BorderStyle.None;
+            txt_name.Cursor = Cursors.IBeam;
+            txt_name.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_name.ForeColor = Color.White;
+            txt_name.Location = new Point(20, 226);
+            txt_name.Margin = new Padding(3, 2, 3, 2);
+            txt_name.Name = "txt_name";
+            txt_name.Size = new Size(219, 22);
+            txt_name.TabIndex = 80;
             // 
-            // button1
+            // btn_search
             // 
-            button1.BackColor = Color.Black;
-            button1.BackgroundImage = Properties.Resources.search_1_5;
-            button1.Cursor = Cursors.Hand;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Location = new Point(1057, 205);
-            button1.Name = "button1";
-            button1.Size = new Size(28, 27);
-            button1.TabIndex = 78;
-            button1.UseVisualStyleBackColor = false;
+            btn_search.BackColor = Color.Black;
+            btn_search.BackgroundImage = Properties.Resources.search_1_5;
+            btn_search.Cursor = Cursors.Hand;
+            btn_search.FlatStyle = FlatStyle.Flat;
+            btn_search.Location = new Point(925, 154);
+            btn_search.Margin = new Padding(3, 2, 3, 2);
+            btn_search.Name = "btn_search";
+            btn_search.Size = new Size(24, 20);
+            btn_search.TabIndex = 78;
+            btn_search.UseVisualStyleBackColor = false;
             // 
             // textBox6
             // 
@@ -98,43 +102,46 @@
             textBox6.Cursor = Cursors.IBeam;
             textBox6.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             textBox6.ForeColor = Color.White;
-            textBox6.Location = new Point(778, 198);
+            textBox6.Location = new Point(681, 148);
+            textBox6.Margin = new Padding(3, 2, 3, 2);
             textBox6.Name = "textBox6";
             textBox6.PlaceholderText = "Search";
-            textBox6.Size = new Size(313, 38);
+            textBox6.Size = new Size(274, 32);
             textBox6.TabIndex = 77;
             // 
-            // button4
+            // btn_delete
             // 
-            button4.BackColor = Color.Black;
-            button4.Cursor = Cursors.Hand;
-            button4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button4.ForeColor = Color.White;
-            button4.Image = Properties.Resources.x_5;
-            button4.ImageAlign = ContentAlignment.MiddleRight;
-            button4.Location = new Point(486, 360);
-            button4.Name = "button4";
-            button4.Size = new Size(117, 55);
-            button4.TabIndex = 76;
-            button4.Text = "Delete";
-            button4.TextAlign = ContentAlignment.MiddleLeft;
-            button4.UseVisualStyleBackColor = false;
+            btn_delete.BackColor = Color.Black;
+            btn_delete.Cursor = Cursors.Hand;
+            btn_delete.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_delete.ForeColor = Color.White;
+            btn_delete.Image = Properties.Resources.x_5;
+            btn_delete.ImageAlign = ContentAlignment.MiddleRight;
+            btn_delete.Location = new Point(425, 284);
+            btn_delete.Margin = new Padding(3, 2, 3, 2);
+            btn_delete.Name = "btn_delete";
+            btn_delete.Size = new Size(102, 41);
+            btn_delete.TabIndex = 76;
+            btn_delete.Text = "Delete";
+            btn_delete.TextAlign = ContentAlignment.MiddleLeft;
+            btn_delete.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btn_add
             // 
-            button2.BackColor = Color.Black;
-            button2.Cursor = Cursors.Hand;
-            button2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button2.ForeColor = Color.White;
-            button2.Image = Properties.Resources.plus_1_1_5;
-            button2.ImageAlign = ContentAlignment.MiddleRight;
-            button2.Location = new Point(486, 269);
-            button2.Name = "button2";
-            button2.Size = new Size(117, 57);
-            button2.TabIndex = 74;
-            button2.Text = "Add";
-            button2.TextAlign = ContentAlignment.MiddleLeft;
-            button2.UseVisualStyleBackColor = false;
+            btn_add.BackColor = Color.Black;
+            btn_add.Cursor = Cursors.Hand;
+            btn_add.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_add.ForeColor = Color.White;
+            btn_add.Image = Properties.Resources.plus_1_1_5;
+            btn_add.ImageAlign = ContentAlignment.MiddleRight;
+            btn_add.Location = new Point(425, 215);
+            btn_add.Margin = new Padding(3, 2, 3, 2);
+            btn_add.Name = "btn_add";
+            btn_add.Size = new Size(102, 43);
+            btn_add.TabIndex = 74;
+            btn_add.Text = "Add";
+            btn_add.TextAlign = ContentAlignment.MiddleLeft;
+            btn_add.UseVisualStyleBackColor = false;
             // 
             // textBox7
             // 
@@ -142,10 +149,11 @@
             textBox7.BorderStyle = BorderStyle.None;
             textBox7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             textBox7.ForeColor = Color.White;
-            textBox7.Location = new Point(23, 359);
+            textBox7.Location = new Point(20, 269);
+            textBox7.Margin = new Padding(3, 2, 3, 2);
             textBox7.Name = "textBox7";
             textBox7.ReadOnly = true;
-            textBox7.Size = new Size(125, 27);
+            textBox7.Size = new Size(109, 22);
             textBox7.TabIndex = 72;
             textBox7.Text = "Price";
             textBox7.TextChanged += textBox7_TextChanged;
@@ -156,19 +164,21 @@
             textBox5.BorderStyle = BorderStyle.None;
             textBox5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             textBox5.ForeColor = Color.White;
-            textBox5.Location = new Point(22, 269);
+            textBox5.Location = new Point(19, 202);
+            textBox5.Margin = new Padding(3, 2, 3, 2);
             textBox5.Name = "textBox5";
             textBox5.ReadOnly = true;
-            textBox5.Size = new Size(125, 27);
+            textBox5.Size = new Size(109, 22);
             textBox5.TabIndex = 71;
             textBox5.Text = "Name";
             // 
             // panel3
             // 
             panel3.BackColor = Color.White;
-            panel3.Location = new Point(23, 334);
+            panel3.Location = new Point(20, 250);
+            panel3.Margin = new Padding(3, 2, 3, 2);
             panel3.Name = "panel3";
-            panel3.Size = new Size(250, 3);
+            panel3.Size = new Size(219, 2);
             panel3.TabIndex = 70;
             // 
             // textBox2
@@ -177,94 +187,101 @@
             textBox2.BorderStyle = BorderStyle.None;
             textBox2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             textBox2.ForeColor = Color.White;
-            textBox2.Location = new Point(22, 176);
+            textBox2.Location = new Point(19, 132);
+            textBox2.Margin = new Padding(3, 2, 3, 2);
             textBox2.Name = "textBox2";
             textBox2.ReadOnly = true;
-            textBox2.Size = new Size(125, 27);
+            textBox2.Size = new Size(109, 22);
             textBox2.TabIndex = 67;
             textBox2.Text = "ID ";
             // 
             // panel1
             // 
             panel1.BackColor = Color.White;
-            panel1.Location = new Point(23, 241);
+            panel1.Location = new Point(20, 181);
+            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(250, 3);
+            panel1.Size = new Size(219, 2);
             panel1.TabIndex = 66;
             // 
-            // textBox1
+            // txt_id
             // 
-            textBox1.BackColor = Color.FromArgb(0, 1, 0);
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Cursor = Cursors.IBeam;
-            textBox1.Enabled = false;
-            textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.ForeColor = Color.White;
-            textBox1.Location = new Point(22, 209);
-            textBox1.Name = "textBox1";
-            textBox1.ReadOnly = true;
-            textBox1.Size = new Size(250, 27);
-            textBox1.TabIndex = 65;
+            txt_id.BackColor = Color.FromArgb(0, 1, 0);
+            txt_id.BorderStyle = BorderStyle.None;
+            txt_id.Cursor = Cursors.IBeam;
+            txt_id.Enabled = false;
+            txt_id.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_id.ForeColor = Color.White;
+            txt_id.Location = new Point(19, 157);
+            txt_id.Margin = new Padding(3, 2, 3, 2);
+            txt_id.Name = "txt_id";
+            txt_id.ReadOnly = true;
+            txt_id.Size = new Size(219, 22);
+            txt_id.TabIndex = 65;
             // 
-            // dataGridView1
+            // dgv_service
             // 
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridView1.BackgroundColor = Color.FromArgb(0, 1, 0);
-            dataGridView1.BorderStyle = BorderStyle.Fixed3D;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.GridColor = Color.White;
-            dataGridView1.Location = new Point(14, 474);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(0, 1, 0);
-            dataGridViewCellStyle1.Font = new Font("Dubai", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle1.SelectionBackColor = Color.DarkGray;
-            dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(1077, 288);
-            dataGridView1.TabIndex = 64;
+            dgv_service.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgv_service.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgv_service.BackgroundColor = Color.FromArgb(0, 1, 0);
+            dgv_service.BorderStyle = BorderStyle.Fixed3D;
+            dgv_service.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgv_service.GridColor = Color.White;
+            dgv_service.Location = new Point(21, 375);
+            dgv_service.Margin = new Padding(3, 2, 3, 2);
+            dgv_service.Name = "dgv_service";
+            dgv_service.RowHeadersWidth = 51;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(0, 1, 0);
+            dataGridViewCellStyle2.Font = new Font("Dubai", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.SelectionBackColor = Color.DarkGray;
+            dgv_service.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dgv_service.RowTemplate.Height = 29;
+            dgv_service.Size = new Size(942, 216);
+            dgv_service.TabIndex = 64;
+            dgv_service.CellClick += dgv_service_CellClick;
             // 
             // service
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Midnight_Inn__5_;
             Controls.Add(panel4);
-            Controls.Add(textBox8);
-            Controls.Add(textBox4);
-            Controls.Add(button1);
+            Controls.Add(txt_price);
+            Controls.Add(txt_name);
+            Controls.Add(btn_search);
             Controls.Add(textBox6);
-            Controls.Add(button4);
-            Controls.Add(button2);
+            Controls.Add(btn_delete);
+            Controls.Add(btn_add);
             Controls.Add(textBox7);
             Controls.Add(textBox5);
             Controls.Add(panel3);
             Controls.Add(textBox2);
             Controls.Add(panel1);
-            Controls.Add(textBox1);
-            Controls.Add(dataGridView1);
+            Controls.Add(txt_id);
+            Controls.Add(dgv_service);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "service";
-            Size = new Size(1642, 833);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Size = new Size(1437, 625);
+            Load += service_Load;
+            ((System.ComponentModel.ISupportInitialize)dgv_service).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
         private Panel panel4;
-        private TextBox textBox8;
-        private TextBox textBox4;
-        private Button button1;
+        private TextBox txt_price;
+        private TextBox txt_name;
+        private Button btn_search;
         private TextBox textBox6;
-        private Button button4;
-        private Button button2;
+        private Button btn_delete;
+        private Button btn_add;
         private TextBox textBox7;
         private TextBox textBox5;
         private Panel panel3;
         private TextBox textBox2;
         private Panel panel1;
-        private TextBox textBox1;
-        private DataGridView dataGridView1;
+        private TextBox txt_id;
+        private DataGridView dgv_service;
     }
 }

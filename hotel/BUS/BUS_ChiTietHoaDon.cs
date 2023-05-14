@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +9,6 @@ namespace BUS
 {
     public class BUS_ChiTietHoaDon
     {
+        DAL_ChiTietHoaDon dCTD = new DAL_ChiTietHoaDon();
     }
 }

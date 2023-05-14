@@ -11,3 +11,26 @@ INSERT INTO NhanVien (maNV, hoTen, ngaySinh, gioiTinh, cccd, sdt) VALUES
 ('NV008', N'Lê Văn Minh', '1988-04-27', 1, '987321654', '0345678912'),
 ('NV009', N'Nguyễn Thị Thúy Vân', '1991-11-10', 0, '321987654', '0456789123'),
 ('NV010', N'Trần Văn Hưng', '1998-06-22', 1, '654321987', '0678912345');
+
+INSERT INTO Phong (loaiPhong, soNguoi, giaPhong, trangThai)
+VALUES 
+	('single', 1, 300000, 0),
+    ('single', 1, 300000, 0),
+    ('double', 2, 400000, 0),
+    ('triple', 3, 500000, 0),
+    ('single', 1, 350000, 0),
+    ('double', 2, 450000, 0),
+    ('triple', 3, 550000, 0),
+    ('single', 1, 320000, 0),
+    ('double', 2, 420000, 0),
+    ('triple', 3, 520000, 0);
+
+INSERT INTO DichVu (tenDichVu, giaDichVu)
+VALUES ('Massage', 150000),
+       ('Spa', 250000),
+       ('Facial', 200000),
+       ('Manicure', 80000),
+       ('Pedicure', 100000),
+       ('Haircut', 120000),
+       ('Hair Coloring', 300000),
+       ('Waxing', 150000);

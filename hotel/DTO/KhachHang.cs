@@ -9,6 +9,7 @@ namespace DTO
     public class KhachHang
     {
         private string maKH;
+        private int maPhong;
         private string hoTen;
         private bool gioiTinh;
         private string diaChi;
@@ -20,9 +21,10 @@ namespace DTO
 
         public KhachHang() { }
 
-        public KhachHang(string maKH, string hoTen, bool gioiTinh, string diaChi, string queQuan, string sdt, string cccd, DateTime ngayDatPhong, DateTime ngayTraphong)
+        public KhachHang(string maKH, int maPhong, string hoTen, bool gioiTinh, string diaChi, string queQuan, string sdt, string cccd, DateTime ngayDatPhong, DateTime ngayTraphong)
         {
             this.maKH = maKH;
+            this.maPhong = maPhong;
             this.hoTen = hoTen;
             this.gioiTinh = gioiTinh;
             this.diaChi = diaChi;
@@ -34,6 +36,7 @@ namespace DTO
         }
 
         public string MaKH { get => maKH; set => maKH = value; }
+        public int MaPhong { get => maPhong; set => maPhong = value; }
         public string HoTen { get => hoTen; set => hoTen = value; }
         public bool GioiTinh { get => gioiTinh; set => gioiTinh = value; }
         public string DiaChi { get => diaChi; set => diaChi = value; }

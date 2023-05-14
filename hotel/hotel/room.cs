@@ -45,8 +45,8 @@ namespace hotel
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Info_room i = new Info_room();
-            i.ShowDialog();
+/*            Info_room i = new Info_room();
+            i.ShowDialog();*/
         }
     }
 }

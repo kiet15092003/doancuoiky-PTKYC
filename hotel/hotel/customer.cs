@@ -37,9 +37,9 @@ namespace hotel
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
+/*            this.Close();
             Info_room i = new Info_room();
-            i.ShowDialog();
+            i.ShowDialog();*/
 
         }
     }

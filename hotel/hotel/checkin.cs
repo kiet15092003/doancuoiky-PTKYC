@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BUS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace hotel
 {
     public partial class checkin : UserControl
     {
+        BUS_Phong bP = new BUS_Phong();
         public checkin()
         {
             InitializeComponent();
@@ -19,7 +21,11 @@ namespace hotel
 
         private void checkin_Load(object sender, EventArgs e)
         {
-
+            bP.bindGridViewByStatus(dgv_Phong);
+            dgv_Phong.Columns[0].HeaderText = "Mã Phòng";
+            dgv_Phong.Columns[1].HeaderText = "Loại";
+            dgv_Phong.Columns[2].HeaderText = "Số người";
+            dgv_Phong.Columns[3].HeaderText = "Giá";
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)
@@ -123,7 +129,8 @@ namespace hotel
 
         private void button13_Click(object sender, EventArgs e)
         {
-            i.ShowDialog();
+            Info_room room = new Info_room(6);
+            room.ShowDialog();
 
         }
 
@@ -132,57 +139,66 @@ namespace hotel
             customer c = new customer();
             c.ShowDialog();
         }
-        Info_room i = new Info_room();
-        private void button4_Click(object sender, EventArgs e)
+        
+        private void btn_r1_Click(object sender, EventArgs e)
         {
-            i.ShowDialog();
+            Info_room room = new Info_room(1);
+            room.ShowDialog();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            i.ShowDialog();
+            Info_room room = new Info_room(2);
+            room.ShowDialog();
 
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            i.ShowDialog();
+            Info_room room = new Info_room(3);
+            room.ShowDialog();
 
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            i.ShowDialog();
+            Info_room room = new Info_room(4);
+            room.ShowDialog();
 
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            i.ShowDialog();
+            Info_room room = new Info_room(5);
+            room.ShowDialog();
 
         }
 
         private void button12_Click(object sender, EventArgs e)
         {
-            i.ShowDialog();
+            Info_room room = new Info_room(7);
+            room.ShowDialog();
 
         }
 
         private void button11_Click(object sender, EventArgs e)
         {
-            i.ShowDialog();
+            Info_room room = new Info_room(8);
+            room.ShowDialog();
 
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
-            i.ShowDialog();
+            Info_room room = new Info_room(9);
+            room.ShowDialog();
 
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
-            i.ShowDialog();
+            Info_room room = new Info_room(10);
+            room.ShowDialog();
 
         }
     }

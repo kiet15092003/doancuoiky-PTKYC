@@ -25,9 +25,20 @@ create table NhanVien
 	constraint pk_NhanVien primary key(maNV)
 )
 
+create table Phong
+(
+	maPhong int identity(1,1),
+	loaiPhong varchar(20), --single, double, triple, ...
+	soNguoi int, --So nguoi toi da
+	giaPhong int,
+	trangThai bit,
+	constraint pk_Phong primary key(maPhong),
+)
+
 create table KhachHang
 (
 	maKH varchar(10) not null,
+	maPhong int not null,
 	hoTen nvarchar(30) not null,
 	gioiTinh bit not null,
 	diaChi nvarchar(100) not null,
@@ -37,20 +48,11 @@ create table KhachHang
 	ngayDatPhong date not null,
 	ngayTraPhong date not null,
 
-	constraint pk_KhachHang primary key(maKH)
+	constraint pk_KhachHang primary key(maKH),
+	constraint fk_KH_maPhong foreign key(maPhong) references Phong(maPhong)
 )
 
-create table Phong
-(
-	maPhong int identity(1,1),
-	maKH varchar(10),
-	loaiPhong varchar(20), --single, double, triple, ...
-	soNguoi int, --So nguoi toi da
-	giaPhong int,
-	trangThai bit,
-	constraint pk_Phong primary key(maPhong),
-	constraint fk_Phong_KhachHang foreign key(maKH) references KhachHang(maKH)
-)
+
 
 create table DichVu
 (
@@ -238,6 +240,7 @@ go
 CREATE PROCEDURE dbo.KhachHang_CRUD
 	@StatementType VARCHAR(10),
 	@Ma_KH VARCHAR(20) = NULL,
+	@Ma_phong INT = NULL,
 	@HoTen_KH NVARCHAR(50) = NULL,
 	@Gioi_tinh BIT = NULL,
 	@Dia_chi NVARCHAR(50) = NULL,
@@ -257,13 +260,14 @@ BEGIN
 	END
 	ELSE IF (@StatementType = 'INSERT')
 	BEGIN
-		INSERT INTO dbo.KhachHang (maKH, hoTen, gioiTinh, diaChi, queQuan, sdt, cccd, ngayDatPhong, ngayTraPhong)
-		VALUES (dbo.auto_mKH(), @HoTen_KH, @Gioi_tinh, @Dia_chi, @Que_quan, @sdt, @CCCD, @Ngay_dat_phong, @Ngay_tra_phong)
+		INSERT INTO dbo.KhachHang (maPhong, maKH, hoTen, gioiTinh, diaChi, queQuan, sdt, cccd, ngayDatPhong, ngayTraPhong)
+		VALUES (dbo.auto_mKH(), @Ma_phong, @HoTen_KH, @Gioi_tinh, @Dia_chi, @Que_quan, @sdt, @CCCD, @Ngay_dat_phong, @Ngay_tra_phong)
 	END
 	ELSE IF (@StatementType = 'UPDATE')
 	BEGIN
 		UPDATE dbo.KhachHang
 		SET hoTen = @HoTen_KH,
+			maPhong = @Ma_phong,
 			gioiTinh = @Gioi_tinh,
 			diaChi = @Dia_chi,
 			queQuan = @Que_quan,
@@ -286,7 +290,6 @@ go
 CREATE PROCEDURE dbo.Phong_CRUD
 	@StatementType VARCHAR(10),
 	@Ma_phong INT = NULL,
-	@Ma_KH VARCHAR(20) = NULL,
 	@Loai_phong NVARCHAR(50) = NULL,
 	@So_nguoi INT = NULL,
 	@Gia_phong int = NULL,
@@ -302,14 +305,13 @@ BEGIN
 	END
 	ELSE IF (@StatementType = 'INSERT')
 	BEGIN
-		INSERT INTO dbo.Phong (maKH, loaiPhong, soNguoi, giaPhong, trangThai)
-		VALUES (@Ma_KH, @Loai_phong, @So_nguoi, @Gia_phong, @Trang_thai)
+		INSERT INTO dbo.Phong (loaiPhong, soNguoi, giaPhong, trangThai)
+		VALUES (@Loai_phong, @So_nguoi, @Gia_phong, @Trang_thai)
 	END
 	ELSE IF (@StatementType = 'UPDATE')
 	BEGIN
 		UPDATE dbo.Phong
-		SET maKH = @Ma_KH,
-			loaiPhong = @Loai_phong,
+		SET loaiPhong = @Loai_phong,
 			soNguoi = @So_nguoi,
 			giaPhong = @Gia_phong,
 			trangThai = @Trang_thai

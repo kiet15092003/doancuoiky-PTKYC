@@ -31,5 +31,10 @@ namespace BUS
         {
             dNV.bindGridView(dataGridView);
         }
+
+        public void bindGridViewbySearch(DataGridView dataGridView, string name)
+        {
+            dNV.bindGridViewbySearch(dataGridView, name);
+        }
     }
 }
