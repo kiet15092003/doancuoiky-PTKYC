@@ -31,10 +31,10 @@
             textBox15 = new TextBox();
             panel8 = new Panel();
             textBox16 = new TextBox();
-            dateTimePicker1 = new DateTimePicker();
+            ngayDat = new DateTimePicker();
             panel9 = new Panel();
             textBox17 = new TextBox();
-            dateTimePicker2 = new DateTimePicker();
+            ngayTra = new DateTimePicker();
             button1 = new Button();
             SuspendLayout();
             // 
@@ -74,12 +74,12 @@
             textBox16.TabIndex = 57;
             textBox16.Text = "Date check in";
             // 
-            // dateTimePicker1
+            // ngayDat
             // 
-            dateTimePicker1.Location = new Point(60, 196);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(250, 27);
-            dateTimePicker1.TabIndex = 58;
+            ngayDat.Location = new Point(60, 196);
+            ngayDat.Name = "ngayDat";
+            ngayDat.Size = new Size(250, 27);
+            ngayDat.TabIndex = 58;
             // 
             // panel9
             // 
@@ -102,12 +102,12 @@
             textBox17.TabIndex = 60;
             textBox17.Text = "Date check out";
             // 
-            // dateTimePicker2
+            // ngayTra
             // 
-            dateTimePicker2.Location = new Point(61, 312);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(250, 27);
-            dateTimePicker2.TabIndex = 61;
+            ngayTra.Location = new Point(61, 312);
+            ngayTra.Name = "ngayTra";
+            ngayTra.Size = new Size(250, 27);
+            ngayTra.TabIndex = 61;
             // 
             // button1
             // 
@@ -129,12 +129,12 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
             ClientSize = new Size(373, 498);
-            Controls.Add(dateTimePicker2);
+            Controls.Add(ngayTra);
             Controls.Add(button1);
             Controls.Add(textBox17);
             Controls.Add(panel9);
             Controls.Add(textBox15);
-            Controls.Add(dateTimePicker1);
+            Controls.Add(ngayDat);
             Controls.Add(textBox16);
             Controls.Add(panel8);
             Name = "schedule";
@@ -149,10 +149,10 @@
         private TextBox textBox15;
         private Panel panel8;
         private TextBox textBox16;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker ngayDat;
         private Panel panel9;
         private TextBox textBox17;
-        private DateTimePicker dateTimePicker2;
+        private DateTimePicker ngayTra;
         private Button button1;
     }
 }

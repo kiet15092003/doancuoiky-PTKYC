@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             dgv_emp = new DataGridView();
             textBox2 = new TextBox();
             panel1 = new Panel();
@@ -58,22 +58,20 @@
             // 
             // dgv_emp
             // 
-            dgv_emp.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            dgv_emp.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgv_emp.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgv_emp.BackgroundColor = Color.FromArgb(25, 25, 25);
             dgv_emp.BorderStyle = BorderStyle.Fixed3D;
             dgv_emp.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgv_emp.GridColor = Color.White;
-            dgv_emp.Location = new Point(24, 361);
-            dgv_emp.Margin = new Padding(3, 2, 3, 2);
+            dgv_emp.Location = new Point(27, 409);
             dgv_emp.Name = "dgv_emp";
             dgv_emp.RowHeadersWidth = 51;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(25, 25, 25);
-            dataGridViewCellStyle2.Font = new Font("Dubai", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.SelectionBackColor = Color.DarkGray;
-            dgv_emp.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(25, 25, 25);
+            dataGridViewCellStyle1.Font = new Font("Dubai", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle1.SelectionBackColor = Color.DarkGray;
+            dgv_emp.RowsDefaultCellStyle = dataGridViewCellStyle1;
             dgv_emp.RowTemplate.Height = 29;
-            dgv_emp.Size = new Size(960, 216);
+            dgv_emp.Size = new Size(1097, 245);
             dgv_emp.TabIndex = 0;
             dgv_emp.CellClick += dgv_emp_CellClick;
             dgv_emp.CellEndEdit += dgv_emp_CellEndEdit;
@@ -84,20 +82,18 @@
             textBox2.BorderStyle = BorderStyle.None;
             textBox2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             textBox2.ForeColor = Color.White;
-            textBox2.Location = new Point(24, 119);
-            textBox2.Margin = new Padding(3, 2, 3, 2);
+            textBox2.Location = new Point(27, 135);
             textBox2.Name = "textBox2";
             textBox2.ReadOnly = true;
-            textBox2.Size = new Size(109, 22);
+            textBox2.Size = new Size(125, 27);
             textBox2.TabIndex = 10;
             textBox2.Text = "ID ";
             // 
             // panel1
             // 
-            panel1.Location = new Point(25, 168);
-            panel1.Margin = new Padding(3, 2, 3, 2);
+            panel1.Location = new Point(29, 190);
             panel1.Name = "panel1";
-            panel1.Size = new Size(218, 2);
+            panel1.Size = new Size(249, 3);
             panel1.TabIndex = 9;
             // 
             // txt_id
@@ -108,11 +104,10 @@
             txt_id.Enabled = false;
             txt_id.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txt_id.ForeColor = Color.White;
-            txt_id.Location = new Point(24, 144);
-            txt_id.Margin = new Padding(3, 2, 3, 2);
+            txt_id.Location = new Point(27, 163);
             txt_id.Name = "txt_id";
             txt_id.ReadOnly = true;
-            txt_id.Size = new Size(218, 22);
+            txt_id.Size = new Size(249, 27);
             txt_id.TabIndex = 8;
             // 
             // textBox3
@@ -121,20 +116,18 @@
             textBox3.BorderStyle = BorderStyle.None;
             textBox3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             textBox3.ForeColor = Color.White;
-            textBox3.Location = new Point(25, 206);
-            textBox3.Margin = new Padding(3, 2, 3, 2);
+            textBox3.Location = new Point(29, 234);
             textBox3.Name = "textBox3";
             textBox3.ReadOnly = true;
-            textBox3.Size = new Size(109, 22);
+            textBox3.Size = new Size(125, 27);
             textBox3.TabIndex = 13;
             textBox3.Text = "Name";
             // 
             // panel2
             // 
-            panel2.Location = new Point(27, 255);
-            panel2.Margin = new Padding(3, 2, 3, 2);
+            panel2.Location = new Point(31, 289);
             panel2.Name = "panel2";
-            panel2.Size = new Size(218, 2);
+            panel2.Size = new Size(249, 3);
             panel2.TabIndex = 12;
             // 
             // txt_name
@@ -144,10 +137,9 @@
             txt_name.Cursor = Cursors.IBeam;
             txt_name.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txt_name.ForeColor = Color.White;
-            txt_name.Location = new Point(25, 231);
-            txt_name.Margin = new Padding(3, 2, 3, 2);
+            txt_name.Location = new Point(29, 262);
             txt_name.Name = "txt_name";
-            txt_name.Size = new Size(218, 22);
+            txt_name.Size = new Size(249, 27);
             txt_name.TabIndex = 11;
             // 
             // textBox5
@@ -156,20 +148,18 @@
             textBox5.BorderStyle = BorderStyle.None;
             textBox5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             textBox5.ForeColor = Color.White;
-            textBox5.Location = new Point(27, 291);
-            textBox5.Margin = new Padding(3, 2, 3, 2);
+            textBox5.Location = new Point(31, 330);
             textBox5.Name = "textBox5";
             textBox5.ReadOnly = true;
-            textBox5.Size = new Size(109, 22);
+            textBox5.Size = new Size(125, 27);
             textBox5.TabIndex = 16;
             textBox5.Text = "Date of birth";
             // 
             // panel3
             // 
-            panel3.Location = new Point(27, 340);
-            panel3.Margin = new Padding(3, 2, 3, 2);
+            panel3.Location = new Point(31, 385);
             panel3.Name = "panel3";
-            panel3.Size = new Size(218, 2);
+            panel3.Size = new Size(249, 3);
             panel3.TabIndex = 15;
             // 
             // textBox7
@@ -178,11 +168,10 @@
             textBox7.BorderStyle = BorderStyle.None;
             textBox7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             textBox7.ForeColor = Color.White;
-            textBox7.Location = new Point(393, 119);
-            textBox7.Margin = new Padding(3, 2, 3, 2);
+            textBox7.Location = new Point(449, 135);
             textBox7.Name = "textBox7";
             textBox7.ReadOnly = true;
-            textBox7.Size = new Size(109, 22);
+            textBox7.Size = new Size(125, 27);
             textBox7.TabIndex = 19;
             textBox7.Text = "Gender";
             // 
@@ -192,20 +181,18 @@
             textBox9.BorderStyle = BorderStyle.None;
             textBox9.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             textBox9.ForeColor = Color.White;
-            textBox9.Location = new Point(393, 206);
-            textBox9.Margin = new Padding(3, 2, 3, 2);
+            textBox9.Location = new Point(449, 234);
             textBox9.Name = "textBox9";
             textBox9.ReadOnly = true;
-            textBox9.Size = new Size(165, 22);
+            textBox9.Size = new Size(189, 27);
             textBox9.TabIndex = 22;
             textBox9.Text = "Citizen Identification";
             // 
             // panel5
             // 
-            panel5.Location = new Point(395, 255);
-            panel5.Margin = new Padding(3, 2, 3, 2);
+            panel5.Location = new Point(451, 289);
             panel5.Name = "panel5";
-            panel5.Size = new Size(218, 2);
+            panel5.Size = new Size(249, 3);
             panel5.TabIndex = 21;
             // 
             // txt_idCard
@@ -215,10 +202,9 @@
             txt_idCard.Cursor = Cursors.IBeam;
             txt_idCard.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txt_idCard.ForeColor = Color.White;
-            txt_idCard.Location = new Point(393, 231);
-            txt_idCard.Margin = new Padding(3, 2, 3, 2);
+            txt_idCard.Location = new Point(449, 262);
             txt_idCard.Name = "txt_idCard";
-            txt_idCard.Size = new Size(218, 22);
+            txt_idCard.Size = new Size(249, 27);
             txt_idCard.TabIndex = 20;
             // 
             // textBox11
@@ -227,20 +213,18 @@
             textBox11.BorderStyle = BorderStyle.None;
             textBox11.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             textBox11.ForeColor = Color.White;
-            textBox11.Location = new Point(393, 291);
-            textBox11.Margin = new Padding(3, 2, 3, 2);
+            textBox11.Location = new Point(449, 330);
             textBox11.Name = "textBox11";
             textBox11.ReadOnly = true;
-            textBox11.Size = new Size(118, 22);
+            textBox11.Size = new Size(135, 27);
             textBox11.TabIndex = 25;
             textBox11.Text = "Phone number";
             // 
             // panel6
             // 
-            panel6.Location = new Point(395, 340);
-            panel6.Margin = new Padding(3, 2, 3, 2);
+            panel6.Location = new Point(451, 385);
             panel6.Name = "panel6";
-            panel6.Size = new Size(218, 2);
+            panel6.Size = new Size(249, 3);
             panel6.TabIndex = 24;
             // 
             // txt_phone
@@ -250,20 +234,18 @@
             txt_phone.Cursor = Cursors.IBeam;
             txt_phone.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txt_phone.ForeColor = Color.White;
-            txt_phone.Location = new Point(393, 316);
-            txt_phone.Margin = new Padding(3, 2, 3, 2);
+            txt_phone.Location = new Point(449, 358);
             txt_phone.Name = "txt_phone";
-            txt_phone.Size = new Size(218, 22);
+            txt_phone.Size = new Size(249, 27);
             txt_phone.TabIndex = 23;
             txt_phone.KeyPress += textBox12_KeyPress;
             // 
             // date_dob
             // 
             date_dob.Cursor = Cursors.Hand;
-            date_dob.Location = new Point(27, 315);
-            date_dob.Margin = new Padding(3, 2, 3, 2);
+            date_dob.Location = new Point(31, 357);
             date_dob.Name = "date_dob";
-            date_dob.Size = new Size(220, 23);
+            date_dob.Size = new Size(251, 25);
             date_dob.TabIndex = 26;
             // 
             // ck_male
@@ -273,10 +255,9 @@
             ck_male.Cursor = Cursors.Hand;
             ck_male.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             ck_male.ForeColor = Color.White;
-            ck_male.Location = new Point(395, 152);
-            ck_male.Margin = new Padding(3, 2, 3, 2);
+            ck_male.Location = new Point(451, 173);
             ck_male.Name = "ck_male";
-            ck_male.Size = new Size(63, 25);
+            ck_male.Size = new Size(77, 32);
             ck_male.TabIndex = 27;
             ck_male.Text = "Male";
             ck_male.UseVisualStyleBackColor = false;
@@ -289,10 +270,9 @@
             ck_female.Cursor = Cursors.Hand;
             ck_female.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             ck_female.ForeColor = Color.White;
-            ck_female.Location = new Point(529, 152);
-            ck_female.Margin = new Padding(3, 2, 3, 2);
+            ck_female.Location = new Point(605, 173);
             ck_female.Name = "ck_female";
-            ck_female.Size = new Size(79, 25);
+            ck_female.Size = new Size(96, 32);
             ck_female.TabIndex = 28;
             ck_female.Text = "Female";
             ck_female.UseVisualStyleBackColor = false;
@@ -306,10 +286,9 @@
             btn_delete.ForeColor = Color.White;
             btn_delete.Image = Properties.Resources.x_5;
             btn_delete.ImageAlign = ContentAlignment.MiddleRight;
-            btn_delete.Location = new Point(713, 277);
-            btn_delete.Margin = new Padding(3, 2, 3, 2);
+            btn_delete.Location = new Point(815, 314);
             btn_delete.Name = "btn_delete";
-            btn_delete.Size = new Size(102, 41);
+            btn_delete.Size = new Size(117, 47);
             btn_delete.TabIndex = 31;
             btn_delete.Text = "Delete";
             btn_delete.TextAlign = ContentAlignment.MiddleLeft;
@@ -324,10 +303,9 @@
             btn_add.ForeColor = Color.White;
             btn_add.Image = Properties.Resources.plus_1_1_5;
             btn_add.ImageAlign = ContentAlignment.MiddleRight;
-            btn_add.Location = new Point(713, 209);
-            btn_add.Margin = new Padding(3, 2, 3, 2);
+            btn_add.Location = new Point(815, 237);
             btn_add.Name = "btn_add";
-            btn_add.Size = new Size(102, 43);
+            btn_add.Size = new Size(117, 48);
             btn_add.TabIndex = 29;
             btn_add.Text = "Add";
             btn_add.TextAlign = ContentAlignment.MiddleLeft;
@@ -340,11 +318,10 @@
             txt_search.Cursor = Cursors.IBeam;
             txt_search.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             txt_search.ForeColor = Color.White;
-            txt_search.Location = new Point(846, 144);
-            txt_search.Margin = new Padding(3, 2, 3, 2);
+            txt_search.Location = new Point(967, 163);
             txt_search.Name = "txt_search";
             txt_search.PlaceholderText = "Search";
-            txt_search.Size = new Size(274, 32);
+            txt_search.Size = new Size(313, 38);
             txt_search.TabIndex = 32;
             // 
             // button1
@@ -353,10 +330,9 @@
             button1.BackgroundImage = Properties.Resources.search_1_5;
             button1.Cursor = Cursors.Hand;
             button1.FlatStyle = FlatStyle.Flat;
-            button1.Location = new Point(1086, 148);
-            button1.Margin = new Padding(3, 2, 3, 2);
+            button1.Location = new Point(1241, 167);
             button1.Name = "button1";
-            button1.Size = new Size(24, 20);
+            button1.Size = new Size(27, 23);
             button1.TabIndex = 33;
             button1.UseVisualStyleBackColor = false;
             // 
@@ -368,10 +344,9 @@
             btn_search.ForeColor = Color.White;
             btn_search.Image = Properties.Resources.search_1_5;
             btn_search.ImageAlign = ContentAlignment.MiddleRight;
-            btn_search.Location = new Point(1126, 139);
-            btn_search.Margin = new Padding(3, 2, 3, 2);
+            btn_search.Location = new Point(1287, 157);
             btn_search.Name = "btn_search";
-            btn_search.Size = new Size(102, 43);
+            btn_search.Size = new Size(117, 48);
             btn_search.TabIndex = 34;
             btn_search.Text = "Search";
             btn_search.TextAlign = ContentAlignment.MiddleLeft;
@@ -381,8 +356,9 @@
             // 
             // staff
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSize = true;
             BackgroundImage = Properties.Resources.Midnight_Inn__2_;
             Controls.Add(btn_search);
             Controls.Add(button1);
@@ -408,9 +384,10 @@
             Controls.Add(panel1);
             Controls.Add(txt_id);
             Controls.Add(dgv_emp);
-            Margin = new Padding(3, 2, 3, 2);
+            Font = new Font("Times New Roman", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            ForeColor = SystemColors.ButtonHighlight;
             Name = "staff";
-            Size = new Size(1316, 575);
+            Size = new Size(1504, 657);
             Load += staff_Load;
             ((System.ComponentModel.ISupportInitialize)dgv_emp).EndInit();
             ResumeLayout(false);

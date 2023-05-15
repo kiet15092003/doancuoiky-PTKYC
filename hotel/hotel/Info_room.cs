@@ -15,6 +15,8 @@ namespace hotel
     {
         private int id;
         BUS_Phong bP = new BUS_Phong();
+        BUS_KhachHang bKH = new BUS_KhachHang();
+
         public Info_room(int id)
         {
             InitializeComponent();
@@ -48,6 +50,20 @@ namespace hotel
             txt_roomMax.Text = phong.SoNguoi.ToString();
             txt_roomPrice.Text = phong.GiaPhong.ToString();
             txt_roomStatus.Text = phong.TrangThai.ToString();
+
+            KhachHang kh = bKH.getKhachHangById(id);
+            if (phong.TrangThai == true)
+            {
+                idKH.Text = kh.MaKH.ToString();
+                nameKH.Text = kh.HoTen.ToString();
+                gtKH.Text = kh.GioiTinh.ToString();
+                dcKH.Text = kh.DiaChi.ToString();
+                phoneKH.Text = kh.Sdt.ToString();
+
+                ngaydat.Text = kh.NgayDatPhong.ToString();
+                ngaytra.Text = kh.NgayTraphong.ToString();
+                tt.Text = "Unpaid";
+            }
 
         }
     }

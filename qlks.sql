@@ -24,7 +24,8 @@ create table NhanVien
 	sdt varchar(11) not null,
 	constraint pk_NhanVien primary key(maNV)
 )
-
+insert into NhanVien values ('a', 'a', GETDATE(), 1, 'q1q', '33')
+select * from NhanVien
 create table Phong
 (
 	maPhong int identity(1,1),
@@ -34,24 +35,22 @@ create table Phong
 	trangThai bit,
 	constraint pk_Phong primary key(maPhong),
 )
-
 create table KhachHang
 (
 	maKH varchar(10) not null,
-	maPhong int not null,
-	hoTen nvarchar(30) not null,
-	gioiTinh bit not null,
-	diaChi nvarchar(100) not null,
-	queQuan nvarchar(100) not null,
-	sdt varchar(11) not null,
-	cccd varchar(20) not null,
+	maPhong int,
+	hoTen nvarchar(30) ,
+	gioiTinh bit,
+	diaChi nvarchar(100)  ,
+	queQuan nvarchar(100) ,
+	sdt varchar(11) ,
+	cccd varchar(20) ,
 	ngayDatPhong date not null,
 	ngayTraPhong date not null,
 
 	constraint pk_KhachHang primary key(maKH),
 	constraint fk_KH_maPhong foreign key(maPhong) references Phong(maPhong)
 )
-
 
 
 create table DichVu
@@ -141,12 +140,6 @@ BEGIN
 	DELETE FROM TaiKhoan
 	WHERE tenTK IN (SELECT maNV FROM deleted);
 END
-
-
-
-
---Ham Tu Dong Tang: Khach Hang
-go
 CREATE FUNCTION dbo.auto_mKH()
 RETURNS VARCHAR(10)
 AS
@@ -166,6 +159,12 @@ BEGIN
 
   RETURN @ID
 END
+
+select * from NhanVien
+
+--Ham Tu Dong Tang: Khach Hang
+go
+
 go
 
 --Ham Tu Dong Tang: Nhan Vien
@@ -456,3 +455,6 @@ BEGIN
 		WHERE maHoaDon = @Ma_hoa_don AND maPhong = @Ma_phong
 	END
 END
+insert into KhachHang values (null, 1, null, 1, null, null, null, null, GETDATE(), GETDATE());
+select * from KhachHang
+delete from KhachHang

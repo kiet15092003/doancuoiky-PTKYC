@@ -108,6 +108,10 @@ namespace hotel
                     MessageBox.Show("Cannot delete the employee, try again");
                 }
             }
+            else
+            {
+                MessageBox.Show("You have to choose an employee first");
+            }
         }
 
         private void btn_add_Click(object sender, EventArgs e)

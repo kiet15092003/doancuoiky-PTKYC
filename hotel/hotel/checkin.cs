@@ -1,4 +1,5 @@
 ﻿using BUS;
+using DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,6 +18,7 @@ namespace hotel
         public checkin()
         {
             InitializeComponent();
+
         }
 
         private void checkin_Load(object sender, EventArgs e)
@@ -26,6 +28,19 @@ namespace hotel
             dgv_Phong.Columns[1].HeaderText = "Loại";
             dgv_Phong.Columns[2].HeaderText = "Số người";
             dgv_Phong.Columns[3].HeaderText = "Giá";
+
+            tt1.Text = bP.getPhongById(1).TrangThai.ToString();
+            tt2.Text = bP.getPhongById(2).TrangThai.ToString();
+            tt3.Text = bP.getPhongById(3).TrangThai.ToString();
+            tt4.Text = bP.getPhongById(4).TrangThai.ToString();
+            tt5.Text = bP.getPhongById(5).TrangThai.ToString();
+            tt6.Text = bP.getPhongById(6).TrangThai.ToString();
+            tt7.Text = bP.getPhongById(7).TrangThai.ToString();
+            tt8.Text = bP.getPhongById(8).TrangThai.ToString();
+            tt9.Text = bP.getPhongById(9).TrangThai.ToString();
+            tt10.Text = bP.getPhongById(10).TrangThai.ToString();
+
+
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)
@@ -139,7 +154,7 @@ namespace hotel
             customer c = new customer();
             c.ShowDialog();
         }
-        
+
         private void btn_r1_Click(object sender, EventArgs e)
         {
             Info_room room = new Info_room(1);
@@ -199,6 +214,11 @@ namespace hotel
         {
             Info_room room = new Info_room(10);
             room.ShowDialog();
+
+        }
+
+        private void dgv_Phong_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

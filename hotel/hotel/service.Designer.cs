@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             panel4 = new Panel();
             txt_price = new TextBox();
             txt_name = new TextBox();
             btn_search = new Button();
-            textBox6 = new TextBox();
+            txt_search = new TextBox();
             btn_delete = new Button();
             btn_add = new Button();
             textBox7 = new TextBox();
@@ -95,19 +96,20 @@
             btn_search.Size = new Size(24, 20);
             btn_search.TabIndex = 78;
             btn_search.UseVisualStyleBackColor = false;
+            btn_search.Click += btn_search_Click;
             // 
-            // textBox6
+            // txt_search
             // 
-            textBox6.BackColor = Color.Black;
-            textBox6.Cursor = Cursors.IBeam;
-            textBox6.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox6.ForeColor = Color.White;
-            textBox6.Location = new Point(681, 148);
-            textBox6.Margin = new Padding(3, 2, 3, 2);
-            textBox6.Name = "textBox6";
-            textBox6.PlaceholderText = "Search";
-            textBox6.Size = new Size(274, 32);
-            textBox6.TabIndex = 77;
+            txt_search.BackColor = Color.Black;
+            txt_search.Cursor = Cursors.IBeam;
+            txt_search.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_search.ForeColor = Color.White;
+            txt_search.Location = new Point(681, 148);
+            txt_search.Margin = new Padding(3, 2, 3, 2);
+            txt_search.Name = "txt_search";
+            txt_search.PlaceholderText = "Search";
+            txt_search.Size = new Size(274, 32);
+            txt_search.TabIndex = 77;
             // 
             // btn_delete
             // 
@@ -125,6 +127,7 @@
             btn_delete.Text = "Delete";
             btn_delete.TextAlign = ContentAlignment.MiddleLeft;
             btn_delete.UseVisualStyleBackColor = false;
+            btn_delete.Click += btn_delete_Click;
             // 
             // btn_add
             // 
@@ -142,6 +145,7 @@
             btn_add.Text = "Add";
             btn_add.TextAlign = ContentAlignment.MiddleLeft;
             btn_add.UseVisualStyleBackColor = false;
+            btn_add.Click += btn_add_Click;
             // 
             // textBox7
             // 
@@ -221,7 +225,7 @@
             // 
             // dgv_service
             // 
-            dgv_service.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgv_service.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgv_service.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dgv_service.BackgroundColor = Color.FromArgb(0, 1, 0);
             dgv_service.BorderStyle = BorderStyle.Fixed3D;
@@ -230,15 +234,24 @@
             dgv_service.Location = new Point(21, 375);
             dgv_service.Margin = new Padding(3, 2, 3, 2);
             dgv_service.Name = "dgv_service";
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Control;
+            dataGridViewCellStyle3.Font = new Font("Times New Roman", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = SystemColors.Window;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dgv_service.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dgv_service.RowHeadersWidth = 51;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(0, 1, 0);
-            dataGridViewCellStyle2.Font = new Font("Dubai", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.SelectionBackColor = Color.DarkGray;
-            dgv_service.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(0, 1, 0);
+            dataGridViewCellStyle4.Font = new Font("Dubai", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle4.SelectionBackColor = Color.DarkGray;
+            dgv_service.RowsDefaultCellStyle = dataGridViewCellStyle4;
             dgv_service.RowTemplate.Height = 29;
             dgv_service.Size = new Size(942, 216);
             dgv_service.TabIndex = 64;
             dgv_service.CellClick += dgv_service_CellClick;
+            dgv_service.CellEndEdit += dgv_service_CellEndEdit;
             // 
             // service
             // 
@@ -249,7 +262,7 @@
             Controls.Add(txt_price);
             Controls.Add(txt_name);
             Controls.Add(btn_search);
-            Controls.Add(textBox6);
+            Controls.Add(txt_search);
             Controls.Add(btn_delete);
             Controls.Add(btn_add);
             Controls.Add(textBox7);
@@ -273,7 +286,7 @@
         private TextBox txt_price;
         private TextBox txt_name;
         private Button btn_search;
-        private TextBox textBox6;
+        private TextBox txt_search;
         private Button btn_delete;
         private Button btn_add;
         private TextBox textBox7;

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BUS;
+using DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,9 +23,16 @@ namespace hotel
         {
 
         }
+        BUS_KhachHang bKH = new BUS_KhachHang();
+        BUS_Phong bP = new BUS_Phong();
 
         private void button1_Click(object sender, EventArgs e)
         {
+         //   (ngayDat.Value)
+            KhachHang kh = new KhachHang();
+            kh.NgayDatPhong = ngayDat.Value;
+            kh.NgayTraphong = ngayTra.Value;
+            bP.updateTrangThaiPhong(kh.NgayDatPhong.Date, kh.NgayTraphong.Date);
             this.Close();
         }
 

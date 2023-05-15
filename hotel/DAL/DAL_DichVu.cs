@@ -18,9 +18,9 @@ namespace DAL
             SqlCommand cmd = new SqlCommand("dbo.DichVu_CRUD", conn);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@StatementType", "INSERT");
-            cmd.Parameters.AddWithValue("@Ma_DV", null);
-            cmd.Parameters.AddWithValue("@Ten_DV", dv.TenDichVu);
-            cmd.Parameters.AddWithValue("@Gia_DV", dv.GiaDichVu);
+            cmd.Parameters.AddWithValue("@Ma_dich_vu", null);
+            cmd.Parameters.AddWithValue("@Ten_dich_vu", dv.TenDichVu);
+            cmd.Parameters.AddWithValue("@Gia_dich_vu", dv.GiaDichVu);
 
             int i = cmd.ExecuteNonQuery();
             if (i != 0)
@@ -38,9 +38,9 @@ namespace DAL
             SqlCommand cmd = new SqlCommand("dbo.DichVu_CRUD", conn);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@StatementType", "UPDATE");
-            cmd.Parameters.AddWithValue("@Ma_DV", dv.MaDichVu);
-            cmd.Parameters.AddWithValue("@Ten_DV", dv.TenDichVu);
-            cmd.Parameters.AddWithValue("@Gia_DV", dv.GiaDichVu);
+            cmd.Parameters.AddWithValue("@Ma_dich_vu", dv.MaDichVu);
+            cmd.Parameters.AddWithValue("@Ten_dich_vu", dv.TenDichVu);
+            cmd.Parameters.AddWithValue("@Gia_dich_vu", dv.GiaDichVu);
 
             int i = cmd.ExecuteNonQuery();
             if (i != 0)
@@ -58,7 +58,7 @@ namespace DAL
             SqlCommand cmd = new SqlCommand("dbo.DichVu_CRUD", conn);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@StatementType", "DELETE");
-            cmd.Parameters.AddWithValue("@Ma_DV", dv.MaDichVu);
+            cmd.Parameters.AddWithValue("@Ma_dich_vu", dv.MaDichVu);
 
             int i = cmd.ExecuteNonQuery();
             if (i != 0)
@@ -82,6 +82,21 @@ namespace DAL
             dataGridView.DataSource = dt;
             conn.Close();
         }
+
+        public void bindGridViewbySearch(DataGridView dataGridView, string name)
+        {
+            conn.Open();
+            string query = "SELECT * from DichVu where maDichVu LIKE '%' + @name + '%' or tenDichVu LIKE '%' + @name + '%'";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@name", name);
+            SqlDataAdapter dv = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            dv.Fill(dt);
+            dataGridView.DataSource = dt;
+            conn.Close();
+        }
+
+
 
     }
 }
