@@ -24,8 +24,7 @@ create table NhanVien
 	sdt varchar(11) not null,
 	constraint pk_NhanVien primary key(maNV)
 )
-insert into NhanVien values ('a', 'a', GETDATE(), 1, 'q1q', '33')
-select * from NhanVien
+
 create table Phong
 (
 	maPhong int identity(1,1),
