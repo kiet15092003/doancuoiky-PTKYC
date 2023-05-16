@@ -14,6 +14,7 @@ namespace hotel
 {
     public partial class room : UserControl
     {
+
         BUS_Phong bP = new BUS_Phong();
         Phong selectedPhong;
         public room()
@@ -55,6 +56,8 @@ namespace hotel
 
         private void button3_Click(object sender, EventArgs e)
         {
+            /*            Info_room i = new Info_room();
+                        i.ShowDialog();*/
             if (selectedPhong != null)
             {
                 Info_room i = new Info_room(selectedPhong.MaPhong);
@@ -64,7 +67,6 @@ namespace hotel
             {
                 MessageBox.Show("You have to choose a room first");
             }
-
         }
 
         private void dgv_Phong_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -99,55 +101,13 @@ namespace hotel
             }
         }
 
-        private void btn_add_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(txt_max.Text) ||
-               string.IsNullOrWhiteSpace(txt_price.Text))
-            {
-                MessageBox.Show("Please fill in all the required information.", "Incomplete Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-
-            if (cbx_type.SelectedIndex <= 0)
-            {
-                MessageBox.Show("Please select a room type.", "Incomplete Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            Phong phong = new Phong(0, cbx_type.SelectedItem.ToString(), Convert.ToInt32(txt_max.Text), Convert.ToInt32(txt_price.Text), false);
-            if (bP.themPhong(phong))
-            {
-                MessageBox.Show("Added Successfully");
-                ClearForm();
-                RefreshGridView();
-
-            }
-            else
-            {
-                MessageBox.Show("Add Failed");
-            }
-        }
-
-        private void ClearForm()
-        {
-            txt_id.Text = string.Empty;
-            txt_max.Text = string.Empty;
-            txt_price.Text = string.Empty;
-            cbx_type.SelectedIndex = -1;
-        }
-
-        private void RefreshGridView()
-        {
-            bP.bindGridView(dgv_Phong);
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             bP.bindGridViewbySearch(dgv_Phong, txt_search.Text);
+
         }
 
-        private void btn_delete_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
             if (selectedPhong != null)
             {
@@ -191,6 +151,16 @@ namespace hotel
                 dgv_Phong.Refresh();
 
             }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            bP.bindGridView(dgv_Phong);
+            dgv_Phong.Columns[0].HeaderText = "Mã Phòng";
+            dgv_Phong.Columns[1].HeaderText = "Loại";
+            dgv_Phong.Columns[2].HeaderText = "Số người";
+            dgv_Phong.Columns[3].HeaderText = "Giá";
+            dgv_Phong.Columns[4].HeaderText = "Trạng thái";
         }
     }
 }

@@ -52,7 +52,6 @@
             btn_add = new Button();
             txt_search = new TextBox();
             button1 = new Button();
-            btn_search = new Button();
             ((System.ComponentModel.ISupportInitialize)dgv_emp).BeginInit();
             SuspendLayout();
             // 
@@ -63,7 +62,7 @@
             dgv_emp.BorderStyle = BorderStyle.Fixed3D;
             dgv_emp.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgv_emp.GridColor = Color.White;
-            dgv_emp.Location = new Point(27, 409);
+            dgv_emp.Location = new Point(27, 450);
             dgv_emp.Name = "dgv_emp";
             dgv_emp.RowHeadersWidth = 51;
             dataGridViewCellStyle1.BackColor = Color.FromArgb(25, 25, 25);
@@ -71,7 +70,7 @@
             dataGridViewCellStyle1.SelectionBackColor = Color.DarkGray;
             dgv_emp.RowsDefaultCellStyle = dataGridViewCellStyle1;
             dgv_emp.RowTemplate.Height = 29;
-            dgv_emp.Size = new Size(1097, 245);
+            dgv_emp.Size = new Size(1097, 296);
             dgv_emp.TabIndex = 0;
             dgv_emp.CellClick += dgv_emp_CellClick;
             dgv_emp.CellEndEdit += dgv_emp_CellEndEdit;
@@ -82,7 +81,7 @@
             textBox2.BorderStyle = BorderStyle.None;
             textBox2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             textBox2.ForeColor = Color.White;
-            textBox2.Location = new Point(27, 135);
+            textBox2.Location = new Point(26, 163);
             textBox2.Name = "textBox2";
             textBox2.ReadOnly = true;
             textBox2.Size = new Size(125, 27);
@@ -91,7 +90,7 @@
             // 
             // panel1
             // 
-            panel1.Location = new Point(29, 190);
+            panel1.Location = new Point(28, 218);
             panel1.Name = "panel1";
             panel1.Size = new Size(249, 3);
             panel1.TabIndex = 9;
@@ -104,7 +103,7 @@
             txt_id.Enabled = false;
             txt_id.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txt_id.ForeColor = Color.White;
-            txt_id.Location = new Point(27, 163);
+            txt_id.Location = new Point(26, 191);
             txt_id.Name = "txt_id";
             txt_id.ReadOnly = true;
             txt_id.Size = new Size(249, 27);
@@ -116,7 +115,7 @@
             textBox3.BorderStyle = BorderStyle.None;
             textBox3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             textBox3.ForeColor = Color.White;
-            textBox3.Location = new Point(29, 234);
+            textBox3.Location = new Point(28, 262);
             textBox3.Name = "textBox3";
             textBox3.ReadOnly = true;
             textBox3.Size = new Size(125, 27);
@@ -125,7 +124,7 @@
             // 
             // panel2
             // 
-            panel2.Location = new Point(31, 289);
+            panel2.Location = new Point(30, 317);
             panel2.Name = "panel2";
             panel2.Size = new Size(249, 3);
             panel2.TabIndex = 12;
@@ -137,7 +136,7 @@
             txt_name.Cursor = Cursors.IBeam;
             txt_name.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txt_name.ForeColor = Color.White;
-            txt_name.Location = new Point(29, 262);
+            txt_name.Location = new Point(28, 290);
             txt_name.Name = "txt_name";
             txt_name.Size = new Size(249, 27);
             txt_name.TabIndex = 11;
@@ -148,7 +147,7 @@
             textBox5.BorderStyle = BorderStyle.None;
             textBox5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             textBox5.ForeColor = Color.White;
-            textBox5.Location = new Point(31, 330);
+            textBox5.Location = new Point(30, 358);
             textBox5.Name = "textBox5";
             textBox5.ReadOnly = true;
             textBox5.Size = new Size(125, 27);
@@ -157,7 +156,7 @@
             // 
             // panel3
             // 
-            panel3.Location = new Point(31, 385);
+            panel3.Location = new Point(30, 413);
             panel3.Name = "panel3";
             panel3.Size = new Size(249, 3);
             panel3.TabIndex = 15;
@@ -168,7 +167,7 @@
             textBox7.BorderStyle = BorderStyle.None;
             textBox7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             textBox7.ForeColor = Color.White;
-            textBox7.Location = new Point(449, 135);
+            textBox7.Location = new Point(448, 163);
             textBox7.Name = "textBox7";
             textBox7.ReadOnly = true;
             textBox7.Size = new Size(125, 27);
@@ -181,7 +180,7 @@
             textBox9.BorderStyle = BorderStyle.None;
             textBox9.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             textBox9.ForeColor = Color.White;
-            textBox9.Location = new Point(449, 234);
+            textBox9.Location = new Point(448, 262);
             textBox9.Name = "textBox9";
             textBox9.ReadOnly = true;
             textBox9.Size = new Size(189, 27);
@@ -190,7 +189,7 @@
             // 
             // panel5
             // 
-            panel5.Location = new Point(451, 289);
+            panel5.Location = new Point(450, 317);
             panel5.Name = "panel5";
             panel5.Size = new Size(249, 3);
             panel5.TabIndex = 21;
@@ -202,7 +201,7 @@
             txt_idCard.Cursor = Cursors.IBeam;
             txt_idCard.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txt_idCard.ForeColor = Color.White;
-            txt_idCard.Location = new Point(449, 262);
+            txt_idCard.Location = new Point(448, 290);
             txt_idCard.Name = "txt_idCard";
             txt_idCard.Size = new Size(249, 27);
             txt_idCard.TabIndex = 20;
@@ -213,7 +212,7 @@
             textBox11.BorderStyle = BorderStyle.None;
             textBox11.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             textBox11.ForeColor = Color.White;
-            textBox11.Location = new Point(449, 330);
+            textBox11.Location = new Point(448, 358);
             textBox11.Name = "textBox11";
             textBox11.ReadOnly = true;
             textBox11.Size = new Size(135, 27);
@@ -222,7 +221,7 @@
             // 
             // panel6
             // 
-            panel6.Location = new Point(451, 385);
+            panel6.Location = new Point(450, 413);
             panel6.Name = "panel6";
             panel6.Size = new Size(249, 3);
             panel6.TabIndex = 24;
@@ -234,7 +233,7 @@
             txt_phone.Cursor = Cursors.IBeam;
             txt_phone.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txt_phone.ForeColor = Color.White;
-            txt_phone.Location = new Point(449, 358);
+            txt_phone.Location = new Point(448, 386);
             txt_phone.Name = "txt_phone";
             txt_phone.Size = new Size(249, 27);
             txt_phone.TabIndex = 23;
@@ -243,7 +242,7 @@
             // date_dob
             // 
             date_dob.Cursor = Cursors.Hand;
-            date_dob.Location = new Point(31, 357);
+            date_dob.Location = new Point(30, 385);
             date_dob.Name = "date_dob";
             date_dob.Size = new Size(251, 25);
             date_dob.TabIndex = 26;
@@ -255,7 +254,7 @@
             ck_male.Cursor = Cursors.Hand;
             ck_male.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             ck_male.ForeColor = Color.White;
-            ck_male.Location = new Point(451, 173);
+            ck_male.Location = new Point(450, 201);
             ck_male.Name = "ck_male";
             ck_male.Size = new Size(77, 32);
             ck_male.TabIndex = 27;
@@ -270,7 +269,7 @@
             ck_female.Cursor = Cursors.Hand;
             ck_female.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             ck_female.ForeColor = Color.White;
-            ck_female.Location = new Point(605, 173);
+            ck_female.Location = new Point(604, 201);
             ck_female.Name = "ck_female";
             ck_female.Size = new Size(96, 32);
             ck_female.TabIndex = 28;
@@ -286,7 +285,7 @@
             btn_delete.ForeColor = Color.White;
             btn_delete.Image = Properties.Resources.x_5;
             btn_delete.ImageAlign = ContentAlignment.MiddleRight;
-            btn_delete.Location = new Point(815, 314);
+            btn_delete.Location = new Point(814, 342);
             btn_delete.Name = "btn_delete";
             btn_delete.Size = new Size(117, 47);
             btn_delete.TabIndex = 31;
@@ -303,7 +302,7 @@
             btn_add.ForeColor = Color.White;
             btn_add.Image = Properties.Resources.plus_1_1_5;
             btn_add.ImageAlign = ContentAlignment.MiddleRight;
-            btn_add.Location = new Point(815, 237);
+            btn_add.Location = new Point(814, 265);
             btn_add.Name = "btn_add";
             btn_add.Size = new Size(117, 48);
             btn_add.TabIndex = 29;
@@ -329,30 +328,13 @@
             button1.BackColor = Color.Black;
             button1.BackgroundImage = Properties.Resources.search_1_5;
             button1.Cursor = Cursors.Hand;
+            button1.FlatAppearance.BorderColor = SystemColors.ActiveCaptionText;
             button1.FlatStyle = FlatStyle.Flat;
-            button1.Location = new Point(1241, 167);
+            button1.Location = new Point(1249, 170);
             button1.Name = "button1";
-            button1.Size = new Size(27, 23);
-            button1.TabIndex = 33;
+            button1.Size = new Size(28, 27);
+            button1.TabIndex = 90;
             button1.UseVisualStyleBackColor = false;
-            // 
-            // btn_search
-            // 
-            btn_search.BackColor = Color.Black;
-            btn_search.Cursor = Cursors.Hand;
-            btn_search.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btn_search.ForeColor = Color.White;
-            btn_search.Image = Properties.Resources.search_1_5;
-            btn_search.ImageAlign = ContentAlignment.MiddleRight;
-            btn_search.Location = new Point(1287, 157);
-            btn_search.Name = "btn_search";
-            btn_search.Size = new Size(117, 48);
-            btn_search.TabIndex = 34;
-            btn_search.Text = "Search";
-            btn_search.TextAlign = ContentAlignment.MiddleLeft;
-            btn_search.UseCompatibleTextRendering = true;
-            btn_search.UseVisualStyleBackColor = false;
-            btn_search.Click += btn_search_Click;
             // 
             // staff
             // 
@@ -360,7 +342,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
             BackgroundImage = Properties.Resources.Midnight_Inn__2_;
-            Controls.Add(btn_search);
             Controls.Add(button1);
             Controls.Add(txt_search);
             Controls.Add(btn_delete);
@@ -387,7 +368,7 @@
             Font = new Font("Times New Roman", 9F, FontStyle.Regular, GraphicsUnit.Point);
             ForeColor = SystemColors.ButtonHighlight;
             Name = "staff";
-            Size = new Size(1504, 657);
+            Size = new Size(1504, 803);
             Load += staff_Load;
             ((System.ComponentModel.ISupportInitialize)dgv_emp).EndInit();
             ResumeLayout(false);
@@ -419,6 +400,5 @@
         private Button btn_add;
         private TextBox txt_search;
         private Button button1;
-        private Button btn_search;
     }
 }

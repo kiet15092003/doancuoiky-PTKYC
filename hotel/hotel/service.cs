@@ -1,5 +1,4 @@
 ﻿using BUS;
-using DAL;
 using DTO;
 using System;
 using System.Collections.Generic;
@@ -37,7 +36,6 @@ namespace hotel
 
         private void service_Load(object sender, EventArgs e)
         {
-            ClearForm();
             bDV.bindGridView(dgv_service);
             dgv_service.Columns[0].HeaderText = "Mã DV";
             dgv_service.Columns[1].HeaderText = "Tên Dịch Vụ";
@@ -75,7 +73,7 @@ namespace hotel
         private void btn_add_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txt_name.Text) ||
-                string.IsNullOrWhiteSpace(txt_price.Text))
+              string.IsNullOrWhiteSpace(txt_price.Text))
             {
                 MessageBox.Show("Please fill in all the required information.", "Incomplete Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -95,7 +93,6 @@ namespace hotel
                 MessageBox.Show("Add Failed");
             }
         }
-
         private void ClearForm()
         {
             txt_id.Text = string.Empty;
@@ -156,6 +153,7 @@ namespace hotel
         private void btn_search_Click(object sender, EventArgs e)
         {
             bDV.bindGridViewbySearch(dgv_service, txt_search.Text);
+
         }
     }
 }

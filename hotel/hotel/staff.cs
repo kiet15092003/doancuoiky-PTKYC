@@ -108,10 +108,6 @@ namespace hotel
                     MessageBox.Show("Cannot delete the employee, try again");
                 }
             }
-            else
-            {
-                MessageBox.Show("You have to choose an employee first");
-            }
         }
 
         private void btn_add_Click(object sender, EventArgs e)
@@ -199,9 +195,16 @@ namespace hotel
             }
         }
 
-        private void btn_search_Click(object sender, EventArgs e)
+
+        private void button1_Click(object sender, EventArgs e)
         {
             bNV.bindGridViewbySearch(dgv_emp, txt_search.Text);
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            bNV.bindGridViewbySearch(dgv_emp, txt_search.Text);
+
         }
     }
 }

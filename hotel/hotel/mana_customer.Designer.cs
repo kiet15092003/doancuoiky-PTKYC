@@ -30,10 +30,10 @@
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             button1 = new Button();
-            textBox6 = new TextBox();
+            txt_search = new TextBox();
+            dgv_cus = new DataGridView();
             button4 = new Button();
-            dataGridView1 = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgv_cus).BeginInit();
             SuspendLayout();
             // 
             // button1
@@ -48,50 +48,50 @@
             button1.Size = new Size(23, 25);
             button1.TabIndex = 75;
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
-            // textBox6
+            // txt_search
             // 
-            textBox6.BackColor = Color.FromArgb(64, 64, 64);
-            textBox6.Cursor = Cursors.IBeam;
-            textBox6.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox6.ForeColor = Color.White;
-            textBox6.Location = new Point(1307, 199);
-            textBox6.Name = "textBox6";
-            textBox6.PlaceholderText = "Search";
-            textBox6.Size = new Size(313, 38);
-            textBox6.TabIndex = 74;
+            txt_search.BackColor = Color.FromArgb(64, 64, 64);
+            txt_search.Cursor = Cursors.IBeam;
+            txt_search.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_search.ForeColor = Color.White;
+            txt_search.Location = new Point(1307, 199);
+            txt_search.Name = "txt_search";
+            txt_search.PlaceholderText = "Search";
+            txt_search.Size = new Size(313, 38);
+            txt_search.TabIndex = 74;
+            // 
+            // dgv_cus
+            // 
+            dgv_cus.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgv_cus.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgv_cus.BackgroundColor = Color.FromArgb(98, 98, 98);
+            dgv_cus.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgv_cus.GridColor = Color.White;
+            dgv_cus.Location = new Point(752, 243);
+            dgv_cus.Name = "dgv_cus";
+            dgv_cus.RowHeadersWidth = 51;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(98, 98, 98);
+            dataGridViewCellStyle1.Font = new Font("Dubai", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle1.SelectionBackColor = Color.DarkGray;
+            dgv_cus.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dgv_cus.RowTemplate.Height = 29;
+            dgv_cus.Size = new Size(868, 433);
+            dgv_cus.TabIndex = 63;
             // 
             // button4
             // 
-            button4.BackColor = Color.FromArgb(64, 64, 64);
-            button4.Cursor = Cursors.Hand;
-            button4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button4.ForeColor = Color.White;
-            button4.ImageAlign = ContentAlignment.MiddleRight;
-            button4.Location = new Point(1100, 702);
+            button4.BackColor = SystemColors.ActiveCaptionText;
+            button4.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            button4.ForeColor = SystemColors.ButtonHighlight;
+            button4.Location = new Point(1146, 731);
             button4.Name = "button4";
-            button4.Size = new Size(117, 55);
-            button4.TabIndex = 73;
-            button4.Text = "Delete";
+            button4.Size = new Size(133, 40);
+            button4.TabIndex = 110;
+            button4.Text = "Save";
             button4.UseVisualStyleBackColor = false;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridView1.BackgroundColor = Color.FromArgb(98, 98, 98);
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.GridColor = Color.White;
-            dataGridView1.Location = new Point(752, 243);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(0, 1, 0);
-            dataGridViewCellStyle1.Font = new Font("Dubai", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle1.SelectionBackColor = Color.DarkGray;
-            dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(868, 433);
-            dataGridView1.TabIndex = 63;
+            button4.Click += button4_Click;
             // 
             // mana_customer
             // 
@@ -99,22 +99,23 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Midnight_Inn__8_;
             BorderStyle = BorderStyle.Fixed3D;
-            Controls.Add(button1);
-            Controls.Add(textBox6);
             Controls.Add(button4);
-            Controls.Add(dataGridView1);
+            Controls.Add(button1);
+            Controls.Add(txt_search);
+            Controls.Add(dgv_cus);
             ForeColor = SystemColors.ButtonHighlight;
             Name = "mana_customer";
             Size = new Size(1641, 830);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Load += mana_customer_Load;
+            ((System.ComponentModel.ISupportInitialize)dgv_cus).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
         private Button button1;
-        private TextBox textBox6;
+        private TextBox txt_search;
+        private DataGridView dgv_cus;
         private Button button4;
-        private DataGridView dataGridView1;
     }
 }

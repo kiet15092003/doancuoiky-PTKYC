@@ -30,24 +30,19 @@
         {
             textBox2 = new TextBox();
             panel1 = new Panel();
-            textBox6 = new TextBox();
+            txt_id = new TextBox();
             textBox1 = new TextBox();
             panel2 = new Panel();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            panel3 = new Panel();
-            textBox5 = new TextBox();
+            tong = new TextBox();
             textBox7 = new TextBox();
             panel4 = new Panel();
             comboBox1 = new ComboBox();
             textBox8 = new TextBox();
             panel5 = new Panel();
-            textBox9 = new TextBox();
-            textBox10 = new TextBox();
+            ngaytra = new TextBox();
             textBox11 = new TextBox();
-            comboBox2 = new ComboBox();
-            panel6 = new Panel();
             button2 = new Button();
+            maKH = new TextBox();
             SuspendLayout();
             // 
             // textBox2
@@ -73,19 +68,19 @@
             panel1.Size = new Size(250, 3);
             panel1.TabIndex = 69;
             // 
-            // textBox6
+            // txt_id
             // 
-            textBox6.BackColor = Color.FromArgb(0, 1, 0);
-            textBox6.BorderStyle = BorderStyle.None;
-            textBox6.Cursor = Cursors.IBeam;
-            textBox6.Enabled = false;
-            textBox6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox6.ForeColor = Color.White;
-            textBox6.Location = new Point(31, 145);
-            textBox6.Name = "textBox6";
-            textBox6.ReadOnly = true;
-            textBox6.Size = new Size(250, 27);
-            textBox6.TabIndex = 68;
+            txt_id.BackColor = Color.FromArgb(0, 1, 0);
+            txt_id.BorderStyle = BorderStyle.None;
+            txt_id.Cursor = Cursors.IBeam;
+            txt_id.Enabled = false;
+            txt_id.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_id.ForeColor = Color.White;
+            txt_id.Location = new Point(31, 145);
+            txt_id.Name = "txt_id";
+            txt_id.ReadOnly = true;
+            txt_id.Size = new Size(250, 27);
+            txt_id.TabIndex = 68;
             // 
             // textBox1
             // 
@@ -99,7 +94,7 @@
             textBox1.ReadOnly = true;
             textBox1.Size = new Size(188, 27);
             textBox1.TabIndex = 73;
-            textBox1.Text = "Total Service Charge";
+            textBox1.Text = "Total";
             // 
             // panel2
             // 
@@ -110,56 +105,19 @@
             panel2.Size = new Size(250, 3);
             panel2.TabIndex = 72;
             // 
-            // textBox3
+            // tong
             // 
-            textBox3.BackColor = Color.FromArgb(0, 1, 0);
-            textBox3.BorderStyle = BorderStyle.None;
-            textBox3.Cursor = Cursors.IBeam;
-            textBox3.Enabled = false;
-            textBox3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox3.ForeColor = Color.White;
-            textBox3.Location = new Point(391, 145);
-            textBox3.Name = "textBox3";
-            textBox3.ReadOnly = true;
-            textBox3.Size = new Size(250, 27);
-            textBox3.TabIndex = 71;
-            // 
-            // textBox4
-            // 
-            textBox4.BackColor = Color.FromArgb(0, 1, 0);
-            textBox4.BorderStyle = BorderStyle.None;
-            textBox4.Enabled = false;
-            textBox4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox4.ForeColor = Color.White;
-            textBox4.Location = new Point(392, 211);
-            textBox4.Name = "textBox4";
-            textBox4.ReadOnly = true;
-            textBox4.Size = new Size(155, 27);
-            textBox4.TabIndex = 76;
-            textBox4.Text = "Total Room Rent";
-            // 
-            // panel3
-            // 
-            panel3.BackColor = Color.White;
-            panel3.Enabled = false;
-            panel3.Location = new Point(394, 274);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(250, 3);
-            panel3.TabIndex = 75;
-            // 
-            // textBox5
-            // 
-            textBox5.BackColor = Color.FromArgb(0, 1, 0);
-            textBox5.BorderStyle = BorderStyle.None;
-            textBox5.Cursor = Cursors.IBeam;
-            textBox5.Enabled = false;
-            textBox5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox5.ForeColor = Color.White;
-            textBox5.Location = new Point(393, 242);
-            textBox5.Name = "textBox5";
-            textBox5.ReadOnly = true;
-            textBox5.Size = new Size(250, 27);
-            textBox5.TabIndex = 74;
+            tong.BackColor = Color.FromArgb(0, 1, 0);
+            tong.BorderStyle = BorderStyle.None;
+            tong.Cursor = Cursors.IBeam;
+            tong.Enabled = false;
+            tong.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            tong.ForeColor = Color.White;
+            tong.Location = new Point(391, 145);
+            tong.Name = "tong";
+            tong.ReadOnly = true;
+            tong.Size = new Size(250, 27);
+            tong.TabIndex = 71;
             // 
             // textBox7
             // 
@@ -168,7 +126,7 @@
             textBox7.Enabled = false;
             textBox7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             textBox7.ForeColor = Color.White;
-            textBox7.Location = new Point(392, 317);
+            textBox7.Location = new Point(392, 216);
             textBox7.Name = "textBox7";
             textBox7.ReadOnly = true;
             textBox7.Size = new Size(155, 27);
@@ -179,7 +137,7 @@
             // 
             panel4.BackColor = Color.White;
             panel4.Enabled = false;
-            panel4.Location = new Point(394, 380);
+            panel4.Location = new Point(394, 279);
             panel4.Name = "panel4";
             panel4.Size = new Size(250, 3);
             panel4.TabIndex = 78;
@@ -188,7 +146,7 @@
             // 
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "Cash", "Bank transfer", "Card" });
-            comboBox1.Location = new Point(394, 350);
+            comboBox1.Location = new Point(394, 249);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(248, 28);
             comboBox1.TabIndex = 80;
@@ -217,33 +175,19 @@
             panel5.Size = new Size(250, 3);
             panel5.TabIndex = 85;
             // 
-            // textBox9
+            // ngaytra
             // 
-            textBox9.BackColor = Color.FromArgb(0, 1, 0);
-            textBox9.BorderStyle = BorderStyle.None;
-            textBox9.Cursor = Cursors.IBeam;
-            textBox9.Enabled = false;
-            textBox9.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox9.ForeColor = Color.White;
-            textBox9.Location = new Point(37, 242);
-            textBox9.Name = "textBox9";
-            textBox9.ReadOnly = true;
-            textBox9.Size = new Size(250, 27);
-            textBox9.TabIndex = 84;
-            // 
-            // textBox10
-            // 
-            textBox10.BackColor = Color.FromArgb(0, 1, 0);
-            textBox10.BorderStyle = BorderStyle.None;
-            textBox10.Enabled = false;
-            textBox10.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox10.ForeColor = Color.White;
-            textBox10.Location = new Point(36, 317);
-            textBox10.Name = "textBox10";
-            textBox10.ReadOnly = true;
-            textBox10.Size = new Size(188, 27);
-            textBox10.TabIndex = 83;
-            textBox10.Text = "Name staff";
+            ngaytra.BackColor = Color.FromArgb(0, 1, 0);
+            ngaytra.BorderStyle = BorderStyle.None;
+            ngaytra.Cursor = Cursors.IBeam;
+            ngaytra.Enabled = false;
+            ngaytra.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            ngaytra.ForeColor = Color.White;
+            ngaytra.Location = new Point(37, 242);
+            ngaytra.Name = "ngaytra";
+            ngaytra.ReadOnly = true;
+            ngaytra.Size = new Size(250, 27);
+            ngaytra.TabIndex = 84;
             // 
             // textBox11
             // 
@@ -257,31 +201,12 @@
             textBox11.TabIndex = 88;
             textBox11.Text = "Bill Information";
             // 
-            // comboBox2
-            // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "Cash", "Bank transfer", "Card" });
-            comboBox2.Location = new Point(40, 350);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(248, 28);
-            comboBox2.TabIndex = 90;
-            comboBox2.Text = "--";
-            // 
-            // panel6
-            // 
-            panel6.BackColor = Color.White;
-            panel6.Enabled = false;
-            panel6.Location = new Point(40, 380);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(250, 3);
-            panel6.TabIndex = 89;
-            // 
             // button2
             // 
             button2.BackColor = SystemColors.ActiveCaptionText;
             button2.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             button2.ForeColor = SystemColors.ButtonHighlight;
-            button2.Location = new Point(287, 452);
+            button2.Location = new Point(280, 325);
             button2.Name = "button2";
             button2.Size = new Size(133, 40);
             button2.TabIndex = 108;
@@ -289,32 +214,41 @@
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
+            // maKH
+            // 
+            maKH.BackColor = Color.FromArgb(0, 1, 0);
+            maKH.BorderStyle = BorderStyle.None;
+            maKH.Cursor = Cursors.IBeam;
+            maKH.Enabled = false;
+            maKH.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            maKH.ForeColor = Color.White;
+            maKH.Location = new Point(594, 12);
+            maKH.Name = "maKH";
+            maKH.ReadOnly = true;
+            maKH.Size = new Size(160, 27);
+            maKH.TabIndex = 109;
+            // 
             // pay
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
-            ClientSize = new Size(731, 539);
+            ClientSize = new Size(731, 403);
+            Controls.Add(maKH);
             Controls.Add(button2);
-            Controls.Add(comboBox2);
-            Controls.Add(panel6);
             Controls.Add(textBox11);
             Controls.Add(textBox8);
             Controls.Add(panel5);
-            Controls.Add(textBox9);
-            Controls.Add(textBox10);
+            Controls.Add(ngaytra);
             Controls.Add(comboBox1);
             Controls.Add(textBox7);
             Controls.Add(panel4);
-            Controls.Add(textBox4);
-            Controls.Add(panel3);
-            Controls.Add(textBox5);
             Controls.Add(textBox1);
             Controls.Add(panel2);
-            Controls.Add(textBox3);
+            Controls.Add(tong);
             Controls.Add(textBox2);
             Controls.Add(panel1);
-            Controls.Add(textBox6);
+            Controls.Add(txt_id);
             Name = "pay";
             Text = "pay";
             Load += pay_Load;
@@ -326,23 +260,19 @@
 
         private TextBox textBox2;
         private Panel panel1;
-        private TextBox textBox6;
+        private TextBox txt_id;
         private TextBox textBox1;
         private Panel panel2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private Panel panel3;
-        private TextBox textBox5;
+        private TextBox tong;
         private TextBox textBox7;
         private Panel panel4;
         private ComboBox comboBox1;
         private TextBox textBox8;
         private Panel panel5;
-        private TextBox textBox9;
-        private TextBox textBox10;
+        private TextBox ngaytra;
         private TextBox textBox11;
-        private ComboBox comboBox2;
-        private Panel panel6;
         private Button button2;
+        private TextBox textBox3;
+        private TextBox maKH;
     }
 }

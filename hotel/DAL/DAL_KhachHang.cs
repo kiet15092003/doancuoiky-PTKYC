@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace DAL
 {
@@ -19,6 +20,7 @@ namespace DAL
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@StatementType", "INSERT");
             cmd.Parameters.AddWithValue("@Ma_KH", null);
+            cmd.Parameters.AddWithValue("@Ma_phong", kh.MaPhong);
             cmd.Parameters.AddWithValue("@HoTen_KH", kh.HoTen);
             cmd.Parameters.AddWithValue("@Gioi_tinh ", kh.GioiTinh);
             cmd.Parameters.AddWithValue("@Dia_chi", kh.DiaChi);
@@ -37,7 +39,23 @@ namespace DAL
             conn.Close();
             return false;
         }
+        public bool xoaKhachHang2(string id)
+        {
+            conn.Open();
+            string query = "DELETE FROM KhachHang WHERE maKH = @id";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@id", id);
 
+       
+            int i = cmd.ExecuteNonQuery();
+            if (i != 0)
+            {
+                conn.Close();
+                return true;
+            }
+            conn.Close();
+            return false;
+        }
         public bool xoaKhachHang(KhachHang kh)
         {
             conn.Open();
@@ -94,6 +112,29 @@ namespace DAL
             conn.Close();
 
             return kh;
+        }
+        public void bindGridViewbySearch(DataGridView dataGridView, string name)
+        {
+            conn.Open();
+            string query = "SELECT * from KhachHang where maKH LIKE '%' + @name + '%' OR hoTen LIKE '%' + @name + '%' OR sdt LIKE '%' + @name + '%' OR cccd LIKE '%' + @name + '%' OR ngayTraPhong LIKE '%' + @name + '%' OR ngayDatPhong LIKE '%' + @name + '%'";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@name", name);
+            SqlDataAdapter dv = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            dv.Fill(dt);
+            dataGridView.DataSource = dt;
+            conn.Close();
+        }
+        public void bindGridView(DataGridView dataGridView)
+        {
+            conn.Open();
+            string query = "SELECT * from KhachHang";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            SqlDataAdapter dv = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            dv.Fill(dt);
+            dataGridView.DataSource = dt;
+            conn.Close();
         }
     }
 }

@@ -9,7 +9,7 @@ namespace DAL
 {
     public class DBConnect
     {
-        protected SqlConnection conn = new SqlConnection("Data Source=PHUHOANG;Initial Catalog=QLKS;Integrated Security=True");
+        protected SqlConnection conn = new SqlConnection("Data Source=QYN\\MAYAO;Initial Catalog=QLKS;Integrated Security=True");
     }
 }
     

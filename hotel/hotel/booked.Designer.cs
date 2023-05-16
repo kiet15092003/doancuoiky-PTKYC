@@ -29,31 +29,40 @@
         private void InitializeComponent()
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            dataGridView1 = new DataGridView();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            dgv_hd = new DataGridView();
             button1 = new Button();
-            textBox12 = new TextBox();
-            button3 = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            txt_search = new TextBox();
+            button4 = new Button();
+            ((System.ComponentModel.ISupportInitialize)dgv_hd).BeginInit();
             SuspendLayout();
             // 
-            // dataGridView1
+            // dgv_hd
             // 
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridView1.BackgroundColor = Color.Black;
-            dataGridView1.BorderStyle = BorderStyle.Fixed3D;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.GridColor = Color.White;
-            dataGridView1.Location = new Point(37, 292);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(0, 1, 0);
-            dataGridViewCellStyle1.Font = new Font("Dubai", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle1.SelectionBackColor = Color.DarkGray;
-            dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(1013, 370);
-            dataGridView1.TabIndex = 65;
+            dgv_hd.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgv_hd.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgv_hd.BackgroundColor = Color.Black;
+            dgv_hd.BorderStyle = BorderStyle.Fixed3D;
+            dgv_hd.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Window;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = SystemColors.ButtonHighlight;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
+            dgv_hd.DefaultCellStyle = dataGridViewCellStyle1;
+            dgv_hd.GridColor = Color.White;
+            dgv_hd.Location = new Point(37, 292);
+            dgv_hd.Name = "dgv_hd";
+            dgv_hd.RowHeadersWidth = 51;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(0, 1, 0);
+            dataGridViewCellStyle2.Font = new Font("Dubai", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.SelectionBackColor = Color.DarkGray;
+            dgv_hd.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dgv_hd.RowTemplate.Height = 29;
+            dgv_hd.Size = new Size(1013, 370);
+            dgv_hd.TabIndex = 65;
             // 
             // button1
             // 
@@ -66,54 +75,55 @@
             button1.Size = new Size(28, 27);
             button1.TabIndex = 89;
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
-            // textBox12
+            // txt_search
             // 
-            textBox12.BackColor = Color.Black;
-            textBox12.Cursor = Cursors.IBeam;
-            textBox12.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox12.ForeColor = Color.White;
-            textBox12.Location = new Point(737, 227);
-            textBox12.Name = "textBox12";
-            textBox12.PlaceholderText = "Search";
-            textBox12.Size = new Size(313, 38);
-            textBox12.TabIndex = 88;
+            txt_search.BackColor = Color.Black;
+            txt_search.Cursor = Cursors.IBeam;
+            txt_search.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_search.ForeColor = Color.White;
+            txt_search.Location = new Point(737, 227);
+            txt_search.Name = "txt_search";
+            txt_search.PlaceholderText = "Search";
+            txt_search.Size = new Size(313, 38);
+            txt_search.TabIndex = 88;
             // 
-            // button3
+            // button4
             // 
-            button3.BackColor = Color.Black;
-            button3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button3.ForeColor = Color.White;
-            button3.ImageAlign = ContentAlignment.MiddleRight;
-            button3.Location = new Point(451, 701);
-            button3.Name = "button3";
-            button3.Size = new Size(187, 63);
-            button3.TabIndex = 95;
-            button3.Text = "Print";
-            button3.UseVisualStyleBackColor = false;
+            button4.BackColor = SystemColors.ActiveCaptionText;
+            button4.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            button4.ForeColor = SystemColors.ButtonHighlight;
+            button4.Location = new Point(490, 704);
+            button4.Name = "button4";
+            button4.Size = new Size(133, 40);
+            button4.TabIndex = 110;
+            button4.Text = "Save";
+            button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
             // 
             // booked
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Midnight_Inn__9_;
-            Controls.Add(button3);
+            Controls.Add(button4);
             Controls.Add(button1);
-            Controls.Add(textBox12);
-            Controls.Add(dataGridView1);
+            Controls.Add(txt_search);
+            Controls.Add(dgv_hd);
             Name = "booked";
             Size = new Size(1639, 842);
             Load += booked_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgv_hd).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private DataGridView dataGridView1;
+        private DataGridView dgv_hd;
         private Button button1;
-        private TextBox textBox12;
-        private Button button3;
+        private TextBox txt_search;
+        private Button button4;
     }
 }

@@ -29,27 +29,27 @@
         private void InitializeComponent()
         {
             textBox2 = new TextBox();
-            checkBox2 = new CheckBox();
-            checkBox1 = new CheckBox();
+            cb_female = new CheckBox();
+            cb_male = new CheckBox();
             textBox11 = new TextBox();
             panel6 = new Panel();
-            textBox12 = new TextBox();
+            txt_sdt = new TextBox();
             textBox9 = new TextBox();
             panel5 = new Panel();
-            textBox10 = new TextBox();
+            txt_cccd = new TextBox();
             textBox7 = new TextBox();
             textBox3 = new TextBox();
             panel2 = new Panel();
-            textBox4 = new TextBox();
+            txt_ten = new TextBox();
             textBox1 = new TextBox();
             panel1 = new Panel();
             textBox6 = new TextBox();
             textBox5 = new TextBox();
             panel3 = new Panel();
-            textBox8 = new TextBox();
+            txt_quequan = new TextBox();
             textBox13 = new TextBox();
             panel4 = new Panel();
-            textBox14 = new TextBox();
+            txt_diachi = new TextBox();
             panel7 = new Panel();
             textBox15 = new TextBox();
             textBox16 = new TextBox();
@@ -57,9 +57,11 @@
             textBox17 = new TextBox();
             panel9 = new Panel();
             panel10 = new Panel();
-            textBox19 = new TextBox();
-            textBox18 = new TextBox();
+            ngaytra = new TextBox();
+            ngaydat = new TextBox();
             button2 = new Button();
+            txt_room = new TextBox();
+            textBox20 = new TextBox();
             panel7.SuspendLayout();
             panel10.SuspendLayout();
             SuspendLayout();
@@ -78,33 +80,33 @@
             textBox2.TabIndex = 1;
             textBox2.Text = "Information";
             // 
-            // checkBox2
+            // cb_female
             // 
-            checkBox2.AutoSize = true;
-            checkBox2.BackColor = Color.Transparent;
-            checkBox2.Cursor = Cursors.Hand;
-            checkBox2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            checkBox2.ForeColor = Color.White;
-            checkBox2.Location = new Point(176, 391);
-            checkBox2.Name = "checkBox2";
-            checkBox2.Size = new Size(96, 32);
-            checkBox2.TabIndex = 46;
-            checkBox2.Text = "Female";
-            checkBox2.UseVisualStyleBackColor = false;
+            cb_female.AutoSize = true;
+            cb_female.BackColor = Color.Transparent;
+            cb_female.Cursor = Cursors.Hand;
+            cb_female.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            cb_female.ForeColor = Color.White;
+            cb_female.Location = new Point(176, 391);
+            cb_female.Name = "cb_female";
+            cb_female.Size = new Size(96, 32);
+            cb_female.TabIndex = 46;
+            cb_female.Text = "Female";
+            cb_female.UseVisualStyleBackColor = false;
             // 
-            // checkBox1
+            // cb_male
             // 
-            checkBox1.AutoSize = true;
-            checkBox1.BackColor = Color.Transparent;
-            checkBox1.Cursor = Cursors.Hand;
-            checkBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            checkBox1.ForeColor = Color.White;
-            checkBox1.Location = new Point(22, 391);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(77, 32);
-            checkBox1.TabIndex = 45;
-            checkBox1.Text = "Male";
-            checkBox1.UseVisualStyleBackColor = false;
+            cb_male.AutoSize = true;
+            cb_male.BackColor = Color.Transparent;
+            cb_male.Cursor = Cursors.Hand;
+            cb_male.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            cb_male.ForeColor = Color.White;
+            cb_male.Location = new Point(22, 391);
+            cb_male.Name = "cb_male";
+            cb_male.Size = new Size(77, 32);
+            cb_male.TabIndex = 45;
+            cb_male.Text = "Male";
+            cb_male.UseVisualStyleBackColor = false;
             // 
             // textBox11
             // 
@@ -127,17 +129,17 @@
             panel6.Size = new Size(250, 3);
             panel6.TabIndex = 42;
             // 
-            // textBox12
+            // txt_sdt
             // 
-            textBox12.BackColor = Color.Black;
-            textBox12.BorderStyle = BorderStyle.None;
-            textBox12.Cursor = Cursors.IBeam;
-            textBox12.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox12.ForeColor = Color.White;
-            textBox12.Location = new Point(443, 380);
-            textBox12.Name = "textBox12";
-            textBox12.Size = new Size(250, 27);
-            textBox12.TabIndex = 41;
+            txt_sdt.BackColor = Color.Black;
+            txt_sdt.BorderStyle = BorderStyle.None;
+            txt_sdt.Cursor = Cursors.IBeam;
+            txt_sdt.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_sdt.ForeColor = Color.White;
+            txt_sdt.Location = new Point(443, 380);
+            txt_sdt.Name = "txt_sdt";
+            txt_sdt.Size = new Size(250, 27);
+            txt_sdt.TabIndex = 41;
             // 
             // textBox9
             // 
@@ -160,17 +162,17 @@
             panel5.Size = new Size(250, 3);
             panel5.TabIndex = 39;
             // 
-            // textBox10
+            // txt_cccd
             // 
-            textBox10.BackColor = Color.Black;
-            textBox10.BorderStyle = BorderStyle.None;
-            textBox10.Cursor = Cursors.IBeam;
-            textBox10.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox10.ForeColor = Color.White;
-            textBox10.Location = new Point(443, 267);
-            textBox10.Name = "textBox10";
-            textBox10.Size = new Size(250, 27);
-            textBox10.TabIndex = 38;
+            txt_cccd.BackColor = Color.Black;
+            txt_cccd.BorderStyle = BorderStyle.None;
+            txt_cccd.Cursor = Cursors.IBeam;
+            txt_cccd.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_cccd.ForeColor = Color.White;
+            txt_cccd.Location = new Point(443, 267);
+            txt_cccd.Name = "txt_cccd";
+            txt_cccd.Size = new Size(250, 27);
+            txt_cccd.TabIndex = 38;
             // 
             // textBox7
             // 
@@ -206,17 +208,17 @@
             panel2.Size = new Size(250, 3);
             panel2.TabIndex = 33;
             // 
-            // textBox4
+            // txt_ten
             // 
-            textBox4.BackColor = Color.Black;
-            textBox4.BorderStyle = BorderStyle.None;
-            textBox4.Cursor = Cursors.IBeam;
-            textBox4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox4.ForeColor = Color.White;
-            textBox4.Location = new Point(22, 267);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(250, 27);
-            textBox4.TabIndex = 32;
+            txt_ten.BackColor = Color.Black;
+            txt_ten.BorderStyle = BorderStyle.None;
+            txt_ten.Cursor = Cursors.IBeam;
+            txt_ten.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_ten.ForeColor = Color.White;
+            txt_ten.Location = new Point(22, 267);
+            txt_ten.Name = "txt_ten";
+            txt_ten.Size = new Size(250, 27);
+            txt_ten.TabIndex = 32;
             // 
             // textBox1
             // 
@@ -274,17 +276,17 @@
             panel3.Size = new Size(250, 3);
             panel3.TabIndex = 51;
             // 
-            // textBox8
+            // txt_quequan
             // 
-            textBox8.BackColor = Color.Black;
-            textBox8.BorderStyle = BorderStyle.None;
-            textBox8.Cursor = Cursors.IBeam;
-            textBox8.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox8.ForeColor = Color.White;
-            textBox8.Location = new Point(443, 173);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(250, 27);
-            textBox8.TabIndex = 50;
+            txt_quequan.BackColor = Color.Black;
+            txt_quequan.BorderStyle = BorderStyle.None;
+            txt_quequan.Cursor = Cursors.IBeam;
+            txt_quequan.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_quequan.ForeColor = Color.White;
+            txt_quequan.Location = new Point(443, 173);
+            txt_quequan.Name = "txt_quequan";
+            txt_quequan.Size = new Size(250, 27);
+            txt_quequan.TabIndex = 50;
             // 
             // textBox13
             // 
@@ -307,17 +309,17 @@
             panel4.Size = new Size(250, 3);
             panel4.TabIndex = 48;
             // 
-            // textBox14
+            // txt_diachi
             // 
-            textBox14.BackColor = Color.Black;
-            textBox14.BorderStyle = BorderStyle.None;
-            textBox14.Cursor = Cursors.IBeam;
-            textBox14.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox14.ForeColor = Color.White;
-            textBox14.Location = new Point(443, 60);
-            textBox14.Name = "textBox14";
-            textBox14.Size = new Size(250, 27);
-            textBox14.TabIndex = 47;
+            txt_diachi.BackColor = Color.Black;
+            txt_diachi.BorderStyle = BorderStyle.None;
+            txt_diachi.Cursor = Cursors.IBeam;
+            txt_diachi.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_diachi.ForeColor = Color.White;
+            txt_diachi.Location = new Point(443, 60);
+            txt_diachi.Name = "txt_diachi";
+            txt_diachi.Size = new Size(250, 27);
+            txt_diachi.TabIndex = 47;
             // 
             // panel7
             // 
@@ -325,22 +327,22 @@
             panel7.BorderStyle = BorderStyle.FixedSingle;
             panel7.Controls.Add(textBox5);
             panel7.Controls.Add(panel3);
-            panel7.Controls.Add(textBox8);
+            panel7.Controls.Add(txt_quequan);
             panel7.Controls.Add(textBox13);
             panel7.Controls.Add(panel4);
-            panel7.Controls.Add(textBox14);
-            panel7.Controls.Add(checkBox2);
-            panel7.Controls.Add(checkBox1);
+            panel7.Controls.Add(txt_diachi);
+            panel7.Controls.Add(cb_female);
+            panel7.Controls.Add(cb_male);
             panel7.Controls.Add(textBox11);
             panel7.Controls.Add(panel6);
-            panel7.Controls.Add(textBox12);
+            panel7.Controls.Add(txt_sdt);
             panel7.Controls.Add(textBox9);
             panel7.Controls.Add(panel5);
-            panel7.Controls.Add(textBox10);
+            panel7.Controls.Add(txt_cccd);
             panel7.Controls.Add(textBox7);
             panel7.Controls.Add(textBox3);
             panel7.Controls.Add(panel2);
-            panel7.Controls.Add(textBox4);
+            panel7.Controls.Add(txt_ten);
             panel7.Controls.Add(textBox1);
             panel7.Controls.Add(panel1);
             panel7.Controls.Add(textBox6);
@@ -413,8 +415,8 @@
             // 
             panel10.BackColor = Color.Transparent;
             panel10.BorderStyle = BorderStyle.FixedSingle;
-            panel10.Controls.Add(textBox19);
-            panel10.Controls.Add(textBox18);
+            panel10.Controls.Add(ngaytra);
+            panel10.Controls.Add(ngaydat);
             panel10.Controls.Add(textBox17);
             panel10.Controls.Add(panel9);
             panel10.Controls.Add(textBox16);
@@ -426,33 +428,33 @@
             panel10.Size = new Size(387, 322);
             panel10.TabIndex = 62;
             // 
-            // textBox19
+            // ngaytra
             // 
-            textBox19.BackColor = Color.Black;
-            textBox19.BorderStyle = BorderStyle.None;
-            textBox19.Cursor = Cursors.IBeam;
-            textBox19.Enabled = false;
-            textBox19.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox19.ForeColor = Color.White;
-            textBox19.Location = new Point(66, 217);
-            textBox19.Name = "textBox19";
-            textBox19.ReadOnly = true;
-            textBox19.Size = new Size(250, 27);
-            textBox19.TabIndex = 62;
+            ngaytra.BackColor = Color.Black;
+            ngaytra.BorderStyle = BorderStyle.None;
+            ngaytra.Cursor = Cursors.IBeam;
+            ngaytra.Enabled = false;
+            ngaytra.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            ngaytra.ForeColor = Color.White;
+            ngaytra.Location = new Point(66, 217);
+            ngaytra.Name = "ngaytra";
+            ngaytra.ReadOnly = true;
+            ngaytra.Size = new Size(250, 27);
+            ngaytra.TabIndex = 62;
             // 
-            // textBox18
+            // ngaydat
             // 
-            textBox18.BackColor = Color.Black;
-            textBox18.BorderStyle = BorderStyle.None;
-            textBox18.Cursor = Cursors.IBeam;
-            textBox18.Enabled = false;
-            textBox18.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox18.ForeColor = Color.White;
-            textBox18.Location = new Point(64, 104);
-            textBox18.Name = "textBox18";
-            textBox18.ReadOnly = true;
-            textBox18.Size = new Size(250, 27);
-            textBox18.TabIndex = 61;
+            ngaydat.BackColor = Color.Black;
+            ngaydat.BorderStyle = BorderStyle.None;
+            ngaydat.Cursor = Cursors.IBeam;
+            ngaydat.Enabled = false;
+            ngaydat.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            ngaydat.ForeColor = Color.White;
+            ngaydat.Location = new Point(64, 104);
+            ngaydat.Name = "ngaydat";
+            ngaydat.ReadOnly = true;
+            ngaydat.Size = new Size(250, 27);
+            ngaydat.TabIndex = 61;
             // 
             // button2
             // 
@@ -472,48 +474,79 @@
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
+            // txt_room
+            // 
+            txt_room.BackColor = Color.Black;
+            txt_room.BorderStyle = BorderStyle.None;
+            txt_room.Cursor = Cursors.IBeam;
+            txt_room.Enabled = false;
+            txt_room.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_room.ForeColor = Color.White;
+            txt_room.Location = new Point(399, 180);
+            txt_room.Name = "txt_room";
+            txt_room.ReadOnly = true;
+            txt_room.Size = new Size(250, 27);
+            txt_room.TabIndex = 83;
+            // 
+            // textBox20
+            // 
+            textBox20.BackColor = Color.Black;
+            textBox20.BorderStyle = BorderStyle.None;
+            textBox20.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox20.ForeColor = Color.White;
+            textBox20.Location = new Point(253, 180);
+            textBox20.Name = "textBox20";
+            textBox20.ReadOnly = true;
+            textBox20.Size = new Size(125, 27);
+            textBox20.TabIndex = 84;
+            textBox20.Text = "Room";
+            // 
             // customer
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Midnight_Inn__7_1;
             ClientSize = new Size(1643, 928);
+            Controls.Add(textBox20);
+            Controls.Add(txt_room);
             Controls.Add(button2);
             Controls.Add(panel7);
             Controls.Add(panel10);
             Name = "customer";
             Text = "customer";
+            Load += customer_Load_1;
             panel7.ResumeLayout(false);
             panel7.PerformLayout();
             panel10.ResumeLayout(false);
             panel10.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private TextBox textBox2;
-        private CheckBox checkBox2;
-        private CheckBox checkBox1;
+        private CheckBox cb_female;
+        private CheckBox cb_male;
         private TextBox textBox11;
         private Panel panel6;
-        private TextBox textBox12;
+        private TextBox txt_sdt;
         private TextBox textBox9;
         private Panel panel5;
-        private TextBox textBox10;
+        private TextBox txt_cccd;
         private TextBox textBox7;
         private TextBox textBox3;
         private Panel panel2;
-        private TextBox textBox4;
+        private TextBox txt_ten;
         private TextBox textBox1;
         private Panel panel1;
         private TextBox textBox6;
         private TextBox textBox5;
         private Panel panel3;
-        private TextBox textBox8;
+        private TextBox txt_quequan;
         private TextBox textBox13;
         private Panel panel4;
-        private TextBox textBox14;
+        private TextBox txt_diachi;
         private Panel panel7;
         private TextBox textBox15;
         private TextBox textBox16;
@@ -522,7 +555,9 @@
         private Panel panel9;
         private Panel panel10;
         private Button button2;
-        private TextBox textBox19;
-        private TextBox textBox18;
+        private TextBox ngaytra;
+        private TextBox ngaydat;
+        private TextBox txt_room;
+        private TextBox textBox20;
     }
 }

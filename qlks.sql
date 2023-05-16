@@ -4,8 +4,7 @@ if exists (select * from sysdatabases where name = 'QLKS')
 
 create database QLKS
 use QLKS
-
-create table TaiKhoan
+ create table TaiKhoan
 (
 	tenTK varchar(50) not null,
 	mk varchar(50),
@@ -81,6 +80,7 @@ create table HoaDon
 	maHoaDon int identity(1,1) not null,
 	tongTien int not null,	
 	ngayLap date default getdate() not null,
+	trangthai bit default 0
 	constraint pk_HoaDon primary key(maHoaDon)
 
 )
@@ -139,27 +139,26 @@ BEGIN
 	DELETE FROM TaiKhoan
 	WHERE tenTK IN (SELECT maNV FROM deleted);
 END
+
+go
+
 CREATE FUNCTION dbo.auto_mKH()
 RETURNS VARCHAR(10)
 AS
 BEGIN
-  DECLARE @ID VARCHAR(10)
+    DECLARE @ID INT
 
-  IF (SELECT COUNT(maKH) FROM KhachHang) = 0
-    SET @ID = 'KH000'
-  ELSE
-    SELECT @ID = MAX(RIGHT(maKH, 3)) FROM KhachHang
+    SELECT @ID = MAX(CONVERT(INT, RIGHT(maKH, 3))) FROM KhachHang
 
-  SELECT @ID = CASE
-      WHEN @ID >= 0 AND @ID < 9 THEN 'KH00' + CONVERT(VARCHAR, CAST(@ID AS INT) + 1)
-      WHEN @ID >= 9 AND @ID < 99 THEN 'KH0' + CONVERT(VARCHAR, CAST(@ID AS INT) + 1)
-      WHEN @ID >= 99 AND @ID < 999 THEN 'KH' + CONVERT(VARCHAR, CAST(@ID AS INT) + 1)
-    END
+    IF @ID IS NULL
+        SET @ID = 0
 
-  RETURN @ID
+    SET @ID = @ID + 1
+
+    RETURN 'KH' + RIGHT('000' + CAST(@ID AS VARCHAR(3)), 3)
 END
 
-select * from NhanVien
+
 
 --Ham Tu Dong Tang: Khach Hang
 go
@@ -258,7 +257,7 @@ BEGIN
 	END
 	ELSE IF (@StatementType = 'INSERT')
 	BEGIN
-		INSERT INTO dbo.KhachHang (maPhong, maKH, hoTen, gioiTinh, diaChi, queQuan, sdt, cccd, ngayDatPhong, ngayTraPhong)
+		INSERT INTO dbo.KhachHang (maKH, maPhong, hoTen, gioiTinh, diaChi, queQuan, sdt, cccd, ngayDatPhong, ngayTraPhong)
 		VALUES (dbo.auto_mKH(), @Ma_phong, @HoTen_KH, @Gioi_tinh, @Dia_chi, @Que_quan, @sdt, @CCCD, @Ngay_dat_phong, @Ngay_tra_phong)
 	END
 	ELSE IF (@StatementType = 'UPDATE')
@@ -393,12 +392,12 @@ BEGIN
 END
 go
 
---Procedure CRUD HoaDon
 CREATE PROCEDURE dbo.HoaDon_CRUD
 	@StatementType VARCHAR(10),
 	@Ma_hoa_don INT = NULL,
 	@Tong_tien INT = NULL,
-	@Ngay_lap DATE = NULL
+	@Ngay_lap DATE = NULL,
+	@Trang_thai bit = NULL
 AS
 BEGIN
 	SET NOCOUNT ON;
@@ -410,14 +409,15 @@ BEGIN
 	END
 	ELSE IF (@StatementType = 'INSERT')
 	BEGIN
-		INSERT INTO dbo.HoaDon (tongTien, ngayLap)
-		VALUES (@Tong_tien, ISNULL(@Ngay_lap, GETDATE()))
+		INSERT INTO dbo.HoaDon (tongTien, ngayLap, trangThai)
+		VALUES (@Tong_tien, ISNULL(@Ngay_lap, GETDATE()), @Trang_thai)
 	END
 	ELSE IF (@StatementType = 'UPDATE')
 	BEGIN
 		UPDATE dbo.HoaDon
 		SET tongTien = @Tong_tien,
-			ngayLap = @Ngay_lap
+			ngayLap = @Ngay_lap,
+			trangThai = @Trang_Thai
 		WHERE maHoaDon = @Ma_hoa_don
 	END
 	ELSE IF (@StatementType = 'DELETE')
@@ -454,6 +454,3 @@ BEGIN
 		WHERE maHoaDon = @Ma_hoa_don AND maPhong = @Ma_phong
 	END
 END
-insert into KhachHang values (null, 1, null, 1, null, null, null, null, GETDATE(), GETDATE());
-select * from KhachHang
-delete from KhachHang

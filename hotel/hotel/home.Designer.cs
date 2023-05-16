@@ -88,7 +88,10 @@
             // 
             // staff1
             // 
+            staff1.AutoSize = true;
             staff1.BackgroundImage = (Image)resources.GetObject("staff1.BackgroundImage");
+            staff1.Font = new Font("Times New Roman", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            staff1.ForeColor = SystemColors.ButtonHighlight;
             staff1.Location = new Point(-1, 83);
             staff1.Name = "staff1";
             staff1.Size = new Size(1640, 1080);
@@ -235,6 +238,7 @@
             Controls.Add(mana_customer1);
             Name = "home";
             Text = "Home";
+            Load += home_Load;
             ResumeLayout(false);
             PerformLayout();
         }

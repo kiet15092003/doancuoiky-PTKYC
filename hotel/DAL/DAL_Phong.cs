@@ -23,7 +23,6 @@ namespace DAL
             dataGridView.DataSource = dataTable;
             conn.Close();
         }
-
         public void bindGridView(DataGridView dataGridView)
         {
             conn.Open();
@@ -35,7 +34,6 @@ namespace DAL
             dataGridView.DataSource = dataTable;
             conn.Close();
         }
-
         public Phong getPhongById(int maPhong)
         {
             conn.Open();
@@ -61,11 +59,31 @@ namespace DAL
 
             return phong;
         }
+        public int getGiaPhong(int maPhong)
+        {
+            conn.Open();
+            string query = "SELECT giaPhong FROM Phong WHERE maPhong = @MaPhong";
 
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@MaPhong", maPhong);
+
+            SqlDataReader reader = cmd.ExecuteReader();
+            int giaPhong = 0;
+
+            if (reader.Read())
+            {
+                giaPhong = Convert.ToInt32(reader["giaPhong"]);
+            }
+
+            reader.Close();
+            conn.Close();
+
+            return giaPhong;
+        }
         public void bindGridViewbySearch(DataGridView dataGridView, string name)
         {
             conn.Open();
-            string query = "SELECT * from Phong where maPhong LIKE '%' + @name + '%'";
+            string query = "SELECT * from Phong where maPhong LIKE '%' + @name + '%' OR loaiPhong LIKE '%' + @name + '%'";
             SqlCommand cmd = new SqlCommand(query, conn);
             cmd.Parameters.AddWithValue("@name", name);
             SqlDataAdapter dv = new SqlDataAdapter(cmd);
@@ -74,8 +92,36 @@ namespace DAL
             dataGridView.DataSource = dt;
             conn.Close();
         }
+      
+        public void updateTrangThaiPhong0()
+        {
+            conn.Open();
+            string query = "UPDATE Phong SET trangThai = 0 WHERE trangThai = 1";
+            SqlCommand cmd = new SqlCommand(query, conn);
 
+            cmd.ExecuteNonQuery();
+            conn.Close();
+        }
+        public void updateTrangThaiPhong1(int id)
+        {
+            conn.Open();
+            string query = "UPDATE Phong SET trangThai = 1 WHERE maPhong = @id";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@id", id);
 
+            cmd.ExecuteNonQuery();
+            conn.Close();
+        }
+        public void updateTrangThaiPhong2(int id)
+        {
+            conn.Open();
+            string query = "UPDATE Phong SET trangThai = 0 WHERE maPhong = @id";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@id", id);
+
+            cmd.ExecuteNonQuery();
+            conn.Close();
+        }
         public void updateTrangThaiPhong(DateTime ngayDat, DateTime ngayTra)
         {
             conn.Open();
@@ -88,7 +134,6 @@ namespace DAL
             cmd.ExecuteNonQuery();
             conn.Close();
         }
-
         public bool themPhong(Phong phong)
         {
             conn.Open();
@@ -110,7 +155,6 @@ namespace DAL
             conn.Close();
             return false;
         }
-
         public bool suaPhong(Phong phong)
         {
             conn.Open();
@@ -155,8 +199,5 @@ namespace DAL
             conn.Close();
             return false;
         }
-
-
-
     }
 }

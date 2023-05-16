@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             textBox1 = new TextBox();
             panel6 = new Panel();
             panel5 = new Panel();
@@ -74,21 +75,22 @@
             tt = new TextBox();
             textBox29 = new TextBox();
             panel15 = new Panel();
-            textBox30 = new TextBox();
+            tonghd = new TextBox();
             textBox31 = new TextBox();
             panel16 = new Panel();
             panel17 = new Panel();
             textBox32 = new TextBox();
-            dataGridView1 = new DataGridView();
+            dgv_ctdv = new DataGridView();
             textBox33 = new TextBox();
-            textBox34 = new TextBox();
+            tongdv = new TextBox();
             button1 = new Button();
             button2 = new Button();
             button3 = new Button();
+            button4 = new Button();
             panel6.SuspendLayout();
             panel7.SuspendLayout();
             panel17.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgv_ctdv).BeginInit();
             SuspendLayout();
             // 
             // textBox1
@@ -658,18 +660,18 @@
             panel15.Size = new Size(250, 3);
             panel15.TabIndex = 95;
             // 
-            // textBox30
+            // tonghd
             // 
-            textBox30.BackColor = Color.Black;
-            textBox30.BorderStyle = BorderStyle.None;
-            textBox30.Cursor = Cursors.IBeam;
-            textBox30.Enabled = false;
-            textBox30.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox30.ForeColor = Color.White;
-            textBox30.Location = new Point(1085, 125);
-            textBox30.Name = "textBox30";
-            textBox30.Size = new Size(250, 27);
-            textBox30.TabIndex = 100;
+            tonghd.BackColor = Color.Black;
+            tonghd.BorderStyle = BorderStyle.None;
+            tonghd.Cursor = Cursors.IBeam;
+            tonghd.Enabled = false;
+            tonghd.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            tonghd.ForeColor = Color.White;
+            tonghd.Location = new Point(1085, 125);
+            tonghd.Name = "tonghd";
+            tonghd.Size = new Size(250, 27);
+            tonghd.TabIndex = 100;
             // 
             // textBox31
             // 
@@ -697,7 +699,7 @@
             // panel17
             // 
             panel17.BorderStyle = BorderStyle.FixedSingle;
-            panel17.Controls.Add(textBox30);
+            panel17.Controls.Add(tonghd);
             panel17.Controls.Add(textBox31);
             panel17.Controls.Add(panel16);
             panel17.Controls.Add(tt);
@@ -730,33 +732,40 @@
             textBox32.TabIndex = 102;
             textBox32.Text = "Service Information";
             // 
-            // dataGridView1
+            // dgv_ctdv
             // 
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridView1.BackgroundColor = Color.Black;
-            dataGridView1.BorderStyle = BorderStyle.Fixed3D;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Enabled = false;
-            dataGridView1.GridColor = Color.White;
-            dataGridView1.Location = new Point(23, 736);
-            dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = SystemColors.Control;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = SystemColors.Window;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridViewCellStyle4.BackColor = Color.FromArgb(0, 1, 0);
-            dataGridViewCellStyle4.Font = new Font("Dubai", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle4.SelectionBackColor = Color.DarkGray;
-            dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(1371, 139);
-            dataGridView1.TabIndex = 103;
+            dgv_ctdv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgv_ctdv.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgv_ctdv.BackgroundColor = Color.Black;
+            dgv_ctdv.BorderStyle = BorderStyle.Fixed3D;
+            dgv_ctdv.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Window;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = SystemColors.ControlLightLight;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
+            dgv_ctdv.DefaultCellStyle = dataGridViewCellStyle1;
+            dgv_ctdv.GridColor = Color.White;
+            dgv_ctdv.Location = new Point(23, 736);
+            dgv_ctdv.Name = "dgv_ctdv";
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Control;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = SystemColors.Window;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgv_ctdv.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dgv_ctdv.RowHeadersWidth = 51;
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(0, 1, 0);
+            dataGridViewCellStyle3.Font = new Font("Dubai", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.SelectionBackColor = Color.DarkGray;
+            dgv_ctdv.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dgv_ctdv.RowTemplate.Height = 29;
+            dgv_ctdv.Size = new Size(1371, 139);
+            dgv_ctdv.TabIndex = 103;
             // 
             // textBox33
             // 
@@ -771,22 +780,23 @@
             textBox33.TabIndex = 104;
             textBox33.Text = "Total servive charge:";
             // 
-            // textBox34
+            // tongdv
             // 
-            textBox34.BackColor = SystemColors.InactiveCaptionText;
-            textBox34.BorderStyle = BorderStyle.FixedSingle;
-            textBox34.Enabled = false;
-            textBox34.Font = new Font("Segoe UI Semilight", 12F, FontStyle.Italic, GraphicsUnit.Point);
-            textBox34.ForeColor = SystemColors.Window;
-            textBox34.Location = new Point(734, 671);
-            textBox34.Name = "textBox34";
-            textBox34.PlaceholderText = "$";
-            textBox34.Size = new Size(201, 34);
-            textBox34.TabIndex = 105;
+            tongdv.BackColor = SystemColors.InactiveCaptionText;
+            tongdv.BorderStyle = BorderStyle.FixedSingle;
+            tongdv.Enabled = false;
+            tongdv.Font = new Font("Segoe UI Semilight", 12F, FontStyle.Italic, GraphicsUnit.Point);
+            tongdv.ForeColor = SystemColors.Window;
+            tongdv.Location = new Point(734, 671);
+            tongdv.Name = "tongdv";
+            tongdv.PlaceholderText = "$";
+            tongdv.Size = new Size(201, 34);
+            tongdv.TabIndex = 105;
             // 
             // button1
             // 
             button1.BackColor = SystemColors.ActiveCaptionText;
+            button1.Enabled = false;
             button1.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             button1.ForeColor = SystemColors.ButtonHighlight;
             button1.Location = new Point(903, 903);
@@ -823,18 +833,32 @@
             button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click;
             // 
+            // button4
+            // 
+            button4.BackColor = SystemColors.ActiveCaptionText;
+            button4.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            button4.ForeColor = SystemColors.ButtonHighlight;
+            button4.Location = new Point(698, 903);
+            button4.Name = "button4";
+            button4.Size = new Size(133, 40);
+            button4.TabIndex = 109;
+            button4.Text = "Save";
+            button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
+            // 
             // Info_room
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
             ClientSize = new Size(1429, 971);
+            Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
-            Controls.Add(textBox34);
+            Controls.Add(tongdv);
             Controls.Add(textBox33);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgv_ctdv);
             Controls.Add(textBox32);
             Controls.Add(panel17);
             Controls.Add(panel7);
@@ -848,7 +872,7 @@
             panel7.PerformLayout();
             panel17.ResumeLayout(false);
             panel17.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgv_ctdv).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -898,17 +922,18 @@
         private TextBox tt;
         private TextBox textBox29;
         private Panel panel15;
-        private TextBox textBox30;
+        private TextBox tonghd;
         private TextBox textBox31;
         private Panel panel16;
         private Panel panel17;
         private TextBox textBox25;
         private TextBox textBox32;
-        private DataGridView dataGridView1;
+        private DataGridView dgv_ctdv;
         private TextBox textBox33;
-        private TextBox textBox34;
+        private TextBox tongdv;
         private Button button1;
         private Button button2;
         private Button button3;
+        private Button button4;
     }
 }

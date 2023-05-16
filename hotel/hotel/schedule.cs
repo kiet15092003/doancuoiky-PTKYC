@@ -25,13 +25,29 @@ namespace hotel
         }
         BUS_KhachHang bKH = new BUS_KhachHang();
         BUS_Phong bP = new BUS_Phong();
-
+        public static DateTime ngaydat;
+        public static DateTime ngaytra;
         private void button1_Click(object sender, EventArgs e)
         {
-         //   (ngayDat.Value)
+            //   (ngayDat.Value)
+            DateTime now = DateTime.Now.Date;
+            if (ngayDat.Value.Date < now || ngayTra.Value.Date < now )
+            {
+                MessageBox.Show("Date selected not valid!");
+                return;
+            }
+            if (ngayTra.Value.Date < ngayDat.Value.Date)
+            {
+                MessageBox.Show("Date selected not valid!");
+                return;
+            }
+            bP.updateTrangThaiPhong0();
+
             KhachHang kh = new KhachHang();
             kh.NgayDatPhong = ngayDat.Value;
+            ngaydat = ngayDat.Value;
             kh.NgayTraphong = ngayTra.Value;
+            ngaytra = ngayTra.Value;
             bP.updateTrangThaiPhong(kh.NgayDatPhong.Date, kh.NgayTraphong.Date);
             this.Close();
         }

@@ -18,9 +18,9 @@ namespace DAL
             SqlCommand cmd = new SqlCommand("dbo.DichVu_CRUD", conn);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@StatementType", "INSERT");
-            cmd.Parameters.AddWithValue("@Ma_dich_vu", null);
-            cmd.Parameters.AddWithValue("@Ten_dich_vu", dv.TenDichVu);
-            cmd.Parameters.AddWithValue("@Gia_dich_vu", dv.GiaDichVu);
+            cmd.Parameters.AddWithValue("@Ma_DV", null);
+            cmd.Parameters.AddWithValue("@Ten_DV", dv.TenDichVu);
+            cmd.Parameters.AddWithValue("@Gia_DV", dv.GiaDichVu);
 
             int i = cmd.ExecuteNonQuery();
             if (i != 0)
@@ -38,9 +38,9 @@ namespace DAL
             SqlCommand cmd = new SqlCommand("dbo.DichVu_CRUD", conn);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@StatementType", "UPDATE");
-            cmd.Parameters.AddWithValue("@Ma_dich_vu", dv.MaDichVu);
-            cmd.Parameters.AddWithValue("@Ten_dich_vu", dv.TenDichVu);
-            cmd.Parameters.AddWithValue("@Gia_dich_vu", dv.GiaDichVu);
+            cmd.Parameters.AddWithValue("@Ma_DV", dv.MaDichVu);
+            cmd.Parameters.AddWithValue("@Ten_DV", dv.TenDichVu);
+            cmd.Parameters.AddWithValue("@Gia_DV", dv.GiaDichVu);
 
             int i = cmd.ExecuteNonQuery();
             if (i != 0)
@@ -58,7 +58,7 @@ namespace DAL
             SqlCommand cmd = new SqlCommand("dbo.DichVu_CRUD", conn);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@StatementType", "DELETE");
-            cmd.Parameters.AddWithValue("@Ma_dich_vu", dv.MaDichVu);
+            cmd.Parameters.AddWithValue("@Ma_DV", dv.MaDichVu);
 
             int i = cmd.ExecuteNonQuery();
             if (i != 0)
@@ -95,7 +95,6 @@ namespace DAL
             dataGridView.DataSource = dt;
             conn.Close();
         }
-
 
 
     }

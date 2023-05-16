@@ -24,12 +24,26 @@ namespace BUS
         {
             return dP.getPhongById(maPhong);
         }
-
-        public void updateTrangThaiPhong (DateTime ngayDat, DateTime ngayTra)
+        public int getGiaPhong(int maPhong)
         {
-            dP.updateTrangThaiPhong(ngayDat, ngayTra);        
+            return dP.getGiaPhong(maPhong);
         }
-
+        public void updateTrangThaiPhong(DateTime ngayDat, DateTime ngayTra)
+        {
+            dP.updateTrangThaiPhong(ngayDat, ngayTra);
+        }
+        public void updateTrangThaiPhong0()
+        {
+            dP.updateTrangThaiPhong0();
+        }
+        public void updateTrangThaiPhong1(int id)
+        {
+            dP.updateTrangThaiPhong1(id);
+        }
+        public void updateTrangThaiPhong2(int id)
+        {
+            dP.updateTrangThaiPhong2(id);
+        }
         public bool themPhong(Phong phong)
         {
             return dP.themPhong(phong);
